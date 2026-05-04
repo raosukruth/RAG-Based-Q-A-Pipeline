@@ -8,6 +8,7 @@ from langchain_core.documents import Document
 from uuid import uuid4
 import openai
 
+
 def load_api_key():
     api_key = os.getenv("API_KEY")
     if api_key:
@@ -51,11 +52,28 @@ def create_faiss_index(docs, api_key):
                                     openai_api_base="https://tritonai-api.ucsd.edu")
     
     vector_store = FAISS.from_documents(docs, embeddings) 
-    uuids = [str(uuid4()) for _ in range(len(docs))]
-    vector_store.add_documents(documents=docs, ids=uuids)
-
     return vector_store
 
+def similarity_search(vector_store, query, k=5):
+    results = vector_store.similarity_search(query, k=k)
+    return results
+
+def llm_response(query, docs, api_key):
+    context = ""
+    for doc in docs:
+        context += doc.page_content + "\n"
+    llm = openai.OpenAI(api_key=api_key, base_url="https://tritonai-api.ucsd.edu")
+    response = llm.chat.completions.create(
+        model="claude-sonnet-4-6",
+        messages=[
+        {
+            "role": "user",
+            "content": context + " " + query
+        }
+    ]
+    )
+
+    return response.choices[0].message.content.strip()
 
 if __name__ == "__main__":
     # arg_parser = argparse.ArgumentParser()
@@ -63,6 +81,7 @@ if __name__ == "__main__":
     # arg_parser.add_argument("--output", required=True, help="Path to output file")
 
     # args = arg_parser.parse_args()
+
 
     api_key = load_api_key()
     print("API key loaded successfully.")
@@ -81,3 +100,12 @@ if __name__ == "__main__":
     vector_store = create_faiss_index(documents, api_key)
     print("FAISS index built successfully")
     print(f"Total documents in index: {vector_store.index.ntotal}")
+
+    results = similarity_search(vector_store, "What is RAG?", k=5)
+    for doc in results:
+        print(doc.metadata['source'])
+        print(doc.page_content[:100])
+
+    response = llm_response("What is RAG?", results, api_key)
+    print("LLM response:")
+    print(response)
