@@ -1,9 +1,9 @@
 import os
 import argparse
+from langchain_text_splitters import RecursiveCharacterTextSplitter
 
-# the funciton should read all 31 .rst files and return their text with metadata
+
 def load_docs(docs_path):
-    # eg {file_name: file_content}
     docs = {}
     for f in os.listdir(docs_path):
         if f.endswith(".rst"):
@@ -11,9 +11,16 @@ def load_docs(docs_path):
                 docs[f] = file.read()
     return docs
     
+# chunk by 256  
+def create_chunks(docs, chunk_size=256):
+    text_splitter = RecursiveCharacterTextSplitter(chunk_size=chunk_size, 
+                                                    chunk_overlap=50, 
+                                                    separators=["\n\n", "\n", ".", " ", ""])
+    chunks_dict = {}
+    for f, content in docs.items():
+        chunks_dict[f] = text_splitter.split_text(content)
+    return chunks_dict
 
-def create_chunks():
-    pass
 
 def load_api_key():
     api_key = os.getenv("API_KEY")
@@ -35,7 +42,6 @@ if __name__ == "__main__":
 
     # args = arg_parser.parse_args()
 
-    # check if api key is loaded
     api_key = load_api_key()
     print("API key loaded successfully.")
     print(f"API key loaded (length={len(api_key)})")
@@ -43,6 +49,12 @@ if __name__ == "__main__":
     docs = load_docs("project1_export/sourcedocs")
     print(len(docs))
     print(list(docs.keys()))
+
+    # test create_chunks
+    chunks_dict = create_chunks(docs)
+    print(len(chunks_dict))
+    for f, chunks in chunks_dict.items():
+        print(f"{f}: {len(chunks)} chunks")
 
 
 
