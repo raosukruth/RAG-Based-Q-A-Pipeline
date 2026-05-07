@@ -1,0 +1,167 @@
+[
+  {
+    "question_id": 1,
+    "question": "Which three base model architectures are compared?",
+    "reference_answer": "The three base model architectures compared are Llama-3.1-8B-Instruct, Qwen2.5-3B-Instruct, and Qwen2.5-7B-Instruct.",
+    "source_evidence": [
+      {"file": "grpo.rst", "lines": [31, 32]}
+    ]
+  },
+  {
+    "question_id": 2,
+    "question": "Why does RapidFire AI execute IC Ops at chunk boundaries rather than immediately when requested?",
+    "reference_answer": "RapidFire AI queues IC Ops and executes them at a chunk boundary for each run, rather than immediately, to avoid potentially non-deterministic or inconsistent behaviors that could arise during concurrent run execution. Because multiple runs are executing in parallel and sharing GPU/CPU resources, interrupting a run mid-chunk could leave it in an undefined state. By waiting for the natural boundary between shards, RapidFire AI ensures that each run finishes its current unit of work cleanly before the operation takes effect. Note that different runs may reach their chunk boundary at different points in time.",
+    "source_evidence": [
+      {"file": "icops.rst", "lines": [75, 82]}
+    ]
+  },
+  {
+    "question_id": 3,
+    "question": "How do you configure a CrossEncoderReranker in RFLangChainRagSpec?",
+    "reference_answer": "Provide the `reranker_cfg` argument as a dictionary with a required key `\"class\"` whose value is the reranker class itself (not an instance). Options include `CrossEncoderReranker` from `langchain.retrievers.document_compressors`. The remaining keys are the kwargs needed to initialize the reranker class; required parameters vary by class. For `CrossEncoderReranker`, the required kwargs are `model_name`, `model_kwargs`, and `top_n`. For example: `reranker_cfg={\"class\": CrossEncoderReranker, \"model_name\": \"cross-encoder/ms-marco-MiniLM-L6-v2\", \"model_kwargs\": {\"device\": \"cpu\"}, \"top_n\": List([2, 5])}`.",
+    "source_evidence": [
+      {"file": "ragspecs.rst", "lines": [118, 119]},
+      {"file": "ragspecs.rst", "lines": [238, 243]}
+    ]
+  },
+  {
+    "question_id": 4,
+    "question": "What is the difference between the Stop and Delete IC Ops in RapidFire AI?",
+    "reference_answer": "Both Stop and Delete remove a run's GPU usage going forward, but they differ in reversibility and visibility. Stop earmarks a run to be stopped at the end of its current chunk — the run remains alive and its plots continue advancing for the current chunk, but it uses no GPU resources from the next chunk onward. A stopped run can be resumed later using the Resume IC Op. Delete earmarks a run to be deleted from the next chunk onward — its curves vanish from the plots almost immediately and no further IC Ops can be performed on it because it is no longer visible. However, even a deleted run's model checkpoints are preserved in the experiment artifacts for post-hoc auditability. You cannot stop or delete an already stopped or deleted run.",
+    "source_evidence": [
+      {"file": "icops.rst", "lines": [95, 101]},
+      {"file": "icops.rst", "lines": [168, 175]}
+    ]
+  },
+  {
+    "question_id": 5,
+    "question": "What are the different custom reward functions used in GRPO?",
+    "reference_answer": "There are 5 custom reward functions that collectively shape the model's behavior: correctness reward (2.0 points for matching the ground truth answer exactly), integer reward (0.5 points for producing numeric answers), strict format reward (0.5 points for exact XML formatting compliance), soft format reward (0.5 points for flexible XML formatting), and XML count reward (up to 0.5 points for proper XML tag usage and structure).",
+    "source_evidence": [
+      {"file": "grpo.rst", "lines": [38, 45]}
+    ]
+  },
+  {
+    "question_id": 6,
+    "question": "How does RapidFire AI generalize the concept of hyperparameter sweeps beyond traditional tools?",
+    "reference_answer": "Traditional tools limit hyperparameter sweeps to regular numeric hyperparameters. RapidFire AI generalizes this to any type of config knob: not just hyperparameters, but also base model architectures, prompt schemes, LoRA adapters, and optimizers for training, as well as data chunking strategies, embedding models, retrieval methods, reranking configurations, generation parameters, and any other user-defined knobs for RAG. This means a single grid search can simultaneously sweep across fundamentally different pipeline stages, not just scalar values.",
+    "source_evidence": [
+      {"file": "configs.rst", "lines": [4, 13]}
+    ]
+  },
+  {
+    "question_id": 7,
+    "question": "How do you write a compute_metrics_fn for use in run_evals()?",
+    "reference_answer": "Define a function with signature `def compute_metrics_fn(batch: dict[str, list]) -> dict[str, dict[str, Any]]`. The `batch` argument contains the current batch of examples including all preprocessed fields, generated outputs under the reserved key `\"generated_text\"`, and any postprocessed fields added by `postprocess_fn`. The function must return a dictionary where each key is a metric name (e.g., `\"Precision\"`, `\"Accuracy\"`) and the corresponding value is a dictionary containing at least the reserved key `\"value\"` with the metric's computed value over the entire batch. Pass this function to the `compute_metrics_fn` key in the eval config dictionary. The function is invoked once per batch after generation and postprocessing. For online aggregation support, the `accumulate_metrics_fn` can annotate each metric as `is_algebraic` or `is_distributive` with a `value_range`.",
+    "source_evidence": [
+      {"file": "evalsfunctions.rst", "lines": [217, 293]}
+    ]
+  },
+  {
+    "question_id": 8,
+    "question": "What is the difference between run_fit() and run_evals() in RapidFire AI?",
+    "reference_answer": "`run_fit()` is used to launch training (including LLM fine-tuning and post-training) and evaluation together for a given config group. It takes `param_config`, a `create_model_fn`, a `train_dataset`, an `eval_dataset`, `num_chunks`, an optional `seed`, and an optional `num_gpus`. It returns `None`. `run_evals()` is used to launch LLM evaluation only — including with optional RAG — for a given config group. It takes `config_group`, a `dataset`, `num_shards`, `num_actors`, and an optional `seed`. Unlike `run_fit()`, it has a return value: a dictionary mapping run/config IDs to a 2-tuple of dictionaries for aggregated and cumulative metrics. `run_fit()` requires a `create_model_fn` to instantiate models and operates on both train and eval data; `run_evals()` has no `create_model_fn` and operates only on an eval dataset.",
+    "source_evidence": [
+      {"file": "experiment.rst", "lines": [68, 98]},
+      {"file": "experiment.rst", "lines": [133, 173]}
+    ]
+  },
+  {
+    "question_id": 9,
+    "question": "What command initializes RapidFire AI for RAG evals and how often do you need to run it?",
+    "reference_answer": "The command is `rapidfireai init --evals`. You need to run init only once for a new virtual environment or when switching GPU(s) on your machine. You do not need to run it after a reboot or for a new terminal tab.",
+    "source_evidence": [
+      {"file": "walkthroughrag.rst", "lines": [70, 75]}
+    ]
+  },
+  {
+    "question_id": 10,
+    "question": "What are the two execution stages in RapidFire AI's RAG pipeline and what work does each stage perform?",
+    "reference_answer": "RapidFire AI's RAG execution pipeline is split into two main stages. The first is Document Preprocessing, where workers operate in parallel on the base data to load documents, optionally chunk them using a text splitter, embed the chunks into vectors, and store them in a vector store. The second is Query Processing, where workers operate in parallel on the evaluation set examples to embed each query, retrieve relevant chunks from the vector store, optionally rerank them, construct the full context, and then generate the output using the generator model. When a document_loader is provided, both stages run together. When only a pre-existing vector store is specified (Read mode), only the Query Processing stage runs.",
+    "source_evidence": [
+      {"file": "ragspecs.rst", "lines": [21, 37]}
+    ]
+  },
+  {
+    "question_id": 11,
+    "question": "How do you configure RFLangChainRagSpec to use an existing Pinecone index in Read mode?",
+    "reference_answer": "To use Pinecone in Read mode, omit the `document_loader` argument so no document preprocessing is triggered. In the `vector_store_cfg` dictionary, set `\"type\": \"pinecone\"` and provide `\"index_namespace\"` as a 2-tuple `(index_name, namespace)` pointing to a pre-existing Pinecone index and namespace. Provide `embedding_cfg` either at the top-level `RFLangChainRagSpec` argument or nested inside `vector_store_cfg` — this must match the embedding model used when the index was originally populated. The Pinecone API key should be set via the `PINECONE_API_KEY` environment variable, or it can be provided explicitly as `\"pinecone_api_key\"` in the `vector_store_cfg`. Optionally, specify `\"text_key\"` if the index was populated by an external tool that stored raw text under a non-default metadata field name (the default is `\"text\"`).",
+    "source_evidence": [
+      {"file": "ragspecs.rst", "lines": [56, 88]}
+    ]
+  },
+  {
+    "question_id": 12,
+    "question": "What is the difference between Normal Approximation and Wilson Score confidence interval strategies in RapidFire AI's online aggregation?",
+    "reference_answer": "Both Normal Approximation and Wilson Score are confidence interval strategies for online aggregation of eval metrics. Normal Approximation is the default strategy; it uses the Central Limit Theorem and is suitable for most cases with non-trivial sample sizes (n > 30), providing tight intervals when statistical assumptions hold. Wilson Score is better for small sample sizes or metrics near the 0 or 1 boundaries, and is more robust than Normal Approximation for extreme proportions. For distributive metrics, Wilson Score falls back to Normal Approximation. Both strategies support optional Finite Population Correction (FPC) and a configurable confidence level.",
+    "source_evidence": [
+      {"file": "onlineagg.rst", "lines": [140, 180]}
+    ]
+  },
+  {
+    "question_id": 13,
+    "question": "What are the components of the few-shot prompting pipeline? Explain each component briefly.",
+    "reference_answer": "The few-shot prompting pipeline uses semantic similarity-based example selection with sentence-transformers/all-MiniLM-L6-v2 embeddings, a pool of 10 hand-crafted diverse examples, few-shot k values of 3 and 5 examples per prompt, and a chain-of-thought prompt template with step-by-step reasoning and a final answer after “####”.",
+    "source_evidence": [
+      {"file": "rag_gsm8k.rst", "lines": [31, 36]}
+    ]
+  },
+  {
+    "question_id": 14,
+    "question": "How does sharded execution in RapidFire AI enable real-time eval metric estimates and what is the role of confidence intervals in this process?",
+    "reference_answer": "RapidFire AI shards the evaluation dataset and processes all configs on one shard at a time, cycling through shards rather than waiting for any single config to finish the full dataset. After each shard, it computes running metric estimates using online aggregation — a technique from database systems research. These estimates come with confidence intervals that reflect statistical uncertainty given the number of examples seen so far. As more shards are processed, the confidence intervals narrow and converge to zero when 100% of the data is seen, at which point the metrics become exact. This allows users to identify and stop poor configs early, before wasting resources processing the full dataset.",
+    "source_evidence": [
+      {"file": "onlineagg.rst", "lines": [4, 54]}
+    ]
+  },
+  {
+    "question_id": 15,
+    "question": "How do you use get_context() with serialize=False to access retrieved document metadata inside a preprocess_fn?",
+    "reference_answer": "Call `rag.get_context(batch_queries=batch[\"query\"], serialize=False)` to retrieve a list of lists of LangChain `Document` objects — one inner list per query, each containing `k` retrieved documents. Setting `serialize=False` bypasses the `document_template` and returns raw `Document` objects, allowing you to access `.metadata` on each document. Any fields ingested via `metadata_func` in the `document_loader` when the index was created (e.g., `corpus_id`, `title`) are accessible as `doc.metadata[\"field_name\"]`. This is useful for building a `retrieved_documents` list for retrieval evaluation metrics such as Precision, Recall, and NDCG. To then convert the retrieved documents to prompt-ready strings for the generator, call `rag.serialize_documents(all_context)`, which applies the configured `document_template`.",
+    "source_evidence": [
+      {"file": "ragspecs.rst", "lines": [161, 180]},
+      {"file": "evalsfunctions.rst", "lines": [38, 54]}
+    ]
+  },
+  {
+    "question_id": 16,
+    "question": "What is the difference between the With Preprocessing and Without Preprocessing modes of RFLangChainRagSpec?",
+    "reference_answer": "In With Preprocessing mode, `RFLangChainRagSpec` creates both Document Preprocessing workers and Query Processing workers. You provide a `document_loader` (required), an optional `text_splitter`, `embedding_cfg`, and an optional `vector_store_cfg`. The preprocessing workers load documents, optionally chunk them, embed the chunks, and store them in a vector store. If `vector_store_cfg` is not provided, a default FAISS flat vector store is created automatically. In Without Preprocessing mode, only Query Processing workers are created — no document loading or embedding of a corpus takes place. You provide an optional `embedding_cfg` (to embed queries), and an optional `retriever` and/or `vector_store_cfg` pointing to a pre-existing vector store. This mode is used when the corpus has already been indexed and stored (e.g., in Pinecone or PGVector in Read mode).",
+    "source_evidence": [
+      {"file": "ragspecs.rst", "lines": [35, 37]}
+    ]
+  },
+  {
+    "question_id": 17,
+    "question": "What are Experiment Ops in RapidFire AI and which methods are included?",
+    "reference_answer": "Experiment Ops are the computation methods associated with the Experiment class in RapidFire AI. They include: run_fit(), end(), and the constructor. There are also two informational methods: get_runs_info() and get_results(). RapidFire AI plans to expand this API with more operations based on feedback, for example for batch testing and inference/generation.",
+    "source_evidence": [
+      {"file": "glossary.rst", "lines": [64, 68]}
+    ]
+  },
+  {
+    "question_id": 18,
+    "question": "How does RapidFire AI's scheduler manage token rate limits across multiple configs when using closed model APIs?",
+    "reference_answer": "When running multiple RAG configs against a closed model API such as OpenAI, each config competes for the same RPM and TPM quota. RapidFire AI's scheduler automatically optimizes how CPU cores and the token rate limits are apportioned across configs in real time. This avoids wasting token spend on poorly performing RAG configs and allows the scheduler to redirect token budget toward more productive configs on the fly. Users set the rpm_limit and tpm_limit parameters in RFOpenAIAPIModelConfig to reflect their account's quota, and the scheduler uses these to throttle requests appropriately across all concurrently running configs.",
+    "source_evidence": [
+      {"file": "difference.rst", "lines": [71, 74]},
+      {"file": "generators.rst", "lines": [111, 115]}
+    ]
+  },
+  {
+    "question_id": 19,
+    "question": "How do you set num_shards and num_actors in run_evals() for a CPU-only machine?",
+    "reference_answer": "Set `num_shards` to the number of logical data splits used to cycle through the evaluation dataset — the recommended minimum is 4, which means all configs will see updated metrics after every 1/4 of the data. Higher values give more frequent metric updates at a minor increase in swapping overhead. Set `num_actors` to the number of parallel worker processes. On a machine with GPUs, the default is the number of GPUs. On a CPU-only machine (e.g., when using only closed model APIs like OpenAI for generation), explicitly set `num_actors` with a recommended maximum of 16. For example: `experiment.run_evals(config_group, dataset=fiqa_dataset, num_shards=4, num_actors=8, seed=42)`. The `seed` parameter (default 42) controls randomness for online aggregation.",
+    "source_evidence": [
+      {"file": "experiment.rst", "lines": [140, 158]}
+    ]
+  },
+  {
+    "question_id": 20,
+    "question": "What is the difference between distributive and algebraic metrics in RapidFire AI's online aggregation, and how does this classification affect how they are displayed?",
+    "reference_answer": "Distributive metrics are purely additive over a set of data points — examples are the count of correct predictions or the sum of output token lengths. Algebraic metrics are averages or proportions that can be decomposed into components that are individually distributive — examples are precision (which divides correct predictions by total data points) and mean ROUGE-1 (which averages per-example values). When defining metrics via `compute_metrics_fn` and `accumulate_metrics_fn`, users annotate each metric with `is_distributive` or `is_algebraic` plus a `value_range`. Metrics with a type defined receive projected estimates and confidence intervals in the online aggregation display as shards are processed. Metrics without a type defined are displayed as-is, with no projected estimates or confidence intervals.",
+    "source_evidence": [
+      {"file": "onlineagg.rst", "lines": [58, 74]}
+    ]
+  }
+]
