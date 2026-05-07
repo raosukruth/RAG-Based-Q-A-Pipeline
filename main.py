@@ -1,20 +1,28 @@
 import os
 import argparse
-from langchain_text_splitters import RecursiveCharacterTextSplitter
-import faiss
-from langchain_community.vectorstores import FAISS
-from langchain_openai import OpenAIEmbeddings
-from langchain_core.documents import Document
-from uuid import uuid4
+# from langchain_text_splitters import RecursiveCharacterTextSplitter
+# import faiss
+# from langchain_community.vectorstores import FAISS
+# from langchain_openai import OpenAIEmbeddings
+# from langchain_core.documents import Document
+# from uuid import uuid4
 import openai
 import json
 import pathlib
+from pathlib import Path
 
-from langchain_community.embeddings import HuggingFaceEmbeddings
-from langchain_community.retrievers import BM25Retriever
-from langchain.retrievers import EnsembleRetriever, ContextualCompressionRetriever
-from langchain.retrievers.document_compressors import CrossEncoderReranker
-from langchain_community.cross_encoders import HuggingFaceCrossEncoder
+from langchain_huggingface import HuggingFaceEmbeddings
+from langchain_pinecone import PineconeVectorStore
+from pinecone import Pinecone
+# from langchain_community.retrievers import BM25Retriever
+# from langchain.retrievers import EnsembleRetriever, ContextualCompressionRetriever
+# from langchain.retrievers.document_compressors import CrossEncoderReranker
+# from langchain_community.cross_encoders import HuggingFaceCrossEncoder
+
+
+PINECONE_API_KEY = Path("~/pinecone-api-key.txt").expanduser().read_text(encoding="utf-8").splitlines()[0].strip()
+PINECONE_INDEX  = "scifact"
+PINECONE_NS     = "chunk1000"
 
 
 def load_api_key():
@@ -30,58 +38,41 @@ def load_api_key():
     except FileNotFoundError:
         raise ValueError("API key was not found in environment or api_key.txt")
 
-def load_docs(docs_path):
-    docs = {}
-    for f in os.listdir(docs_path):
-        if f.endswith(".rst"):
-            with open(os.path.join(docs_path, f), "r",  encoding="utf-8") as file:
-                docs[f] = file.read()
-    return docs
+def resolve_index_name(pc, preferred):
+    available = [idx.name for idx in pc.list_indexes()]
+    print(f"Available Pinecone indexes: {available}")
+    if preferred in available:
+        return preferred
+    if available:
+        print(f"Index '{preferred}' not found — using '{available[0]}' instead.")
+        return available[0]
+    raise RuntimeError("No Pinecone indexes found. Check PINECONE_API_KEY.")
 
 
-def create_chunks(docs, chunk_size=1000, chunk_overlap=150):
-    splitter = RecursiveCharacterTextSplitter(chunk_size=chunk_size, chunk_overlap=chunk_overlap, 
-                                                separators=["\n\n", "\n", ".", " ", ""], add_start_index=True)
-    documents = []
-    for fname, content in docs.items():
-        chunks = splitter.create_documents([content], metadatas=[{"source": fname}])
-        for i, chunk in enumerate(chunks):
-            start = chunk.metadata["start_index"]
-            line_start = content[:start].count("\n") + 1
-            line_end   = line_start + chunk.page_content.count("\n")
-            chunk.metadata.update({
-                "chunk_index": i,
-                "line_start": line_start,
-                "line_end": line_end,
-            })
-            documents.append(chunk)
-    return documents
-
-def create_faiss_index(docs, api_key):
-    # embeddings = OpenAIEmbeddings(model="api-tgpt-embeddings", openai_api_key=api_key, 
-    #                                 openai_api_base="https://tritonai-api.ucsd.edu")
+def build_pinecone_retriever(k=10):
     embeddings = HuggingFaceEmbeddings(
         model_name="BAAI/bge-small-en-v1.5",
+        model_kwargs={"device": "cpu"},
         encode_kwargs={"normalize_embeddings": True},
     )
-    vector_store = FAISS.from_documents(docs, embeddings) 
-    return vector_store
+    pc = Pinecone(api_key=PINECONE_API_KEY)
+    index_name = resolve_index_name(pc, PINECONE_INDEX)
+    index = pc.Index(index_name)
+    vector_store = PineconeVectorStore(index=index, embedding=embeddings, namespace=PINECONE_NS)
+    return vector_store.as_retriever(search_type="similarity", search_kwargs={"k": k})
 
-def similarity_search(vector_store, query, k=5):
-    results = vector_store.similarity_search(query, k=k)
-    return results
 
-def build_retriever(documents, vector_store, k_retrieve=20, k_final=5):
-    vec = vector_store.as_retriever(search_kwargs={"k": k_retrieve})
-    bm25 = BM25Retriever.from_documents(documents); bm25.k = k_retrieve
-    # hybrid = EnsembleRetriever(retrievers=[vec, bm25], weights=[0.5, 0.5])
-    hybrid = EnsembleRetriever(retrievers=[vec, bm25], weights=[0.4, 0.6])
-    
-    reranker = HuggingFaceCrossEncoder(model_name="cross-encoder/ms-marco-MiniLM-L-4-v2")
-    # reranker = HuggingFaceCrossEncoder(model_name="cross-encoder/ms-marco-MiniLM-L-6-v2")
-    # reranker = HuggingFaceCrossEncoder(model_name="BAAI/bge-reranker-base")
-    compressor = CrossEncoderReranker(model=reranker, top_n=k_final)
-    return ContextualCompressionRetriever(base_compressor=compressor, base_retriever=hybrid)
+# def load_docs(docs_path): ...
+# def create_chunks(docs, chunk_size=1000, chunk_overlap=150): ...
+# def create_faiss_index(docs, api_key): ...
+# def similarity_search(vector_store, query, k=5): ...
+# def build_retriever(documents, vector_store, k_retrieve=20, k_final=5):
+#     vec   = vector_store.as_retriever(search_kwargs={"k": k_retrieve})
+#     bm25  = BM25Retriever.from_documents(documents); bm25.k = k_retrieve
+#     hybrid = EnsembleRetriever(retrievers=[vec, bm25], weights=[0.4, 0.6])
+#     reranker  = HuggingFaceCrossEncoder(model_name="cross-encoder/ms-marco-MiniLM-L-4-v2")
+#     compressor = CrossEncoderReranker(model=reranker, top_n=k_final)
+#     return ContextualCompressionRetriever(base_compressor=compressor, base_retriever=hybrid)
 
 
 def llm_response(query, docs, api_key):
@@ -117,14 +108,9 @@ if __name__ == "__main__":
     args = arg_parser.parse_args()
 
     api_key = load_api_key()
-    docs = load_docs("project1_export/sourcedocs")
 
-    # chunks_dict = create_chunks(docs)
-    # documents = modify_chunks_for_faiss(chunks_dict, docs)
-
-    documents = create_chunks(docs)
-    vector_store = create_faiss_index(documents, api_key)
-    retriever = build_retriever(documents, vector_store, k_retrieve=20, k_final=5)
+    # Pinecone: chunk1000 namespace, similarity k=10, no reranker
+    retriever = build_pinecone_retriever(k=10)
 
 
     results = []
@@ -134,8 +120,7 @@ if __name__ == "__main__":
         question_id = i["question_id"]
         print(f"Processing question {question_id}: {question}")    
 
-        # docs = similarity_search(vector_store, question, k=5)
-        docs = retriever.invoke(question)   # already top-5, reranked
+        docs = retriever.invoke(question)   # Pinecone similarity k=10
 
         print("\n" + "="*80)
         print(f"Q{question_id}: {question}")
