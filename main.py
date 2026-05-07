@@ -1,6 +1,6 @@
 import os
 import argparse
-# from langchain_text_splitters import RecursiveCharacterTextSplitter
+from langchain_text_splitters import RecursiveCharacterTextSplitter
 # import faiss
 # from langchain_community.vectorstores import FAISS
 # from langchain_openai import OpenAIEmbeddings
@@ -21,8 +21,40 @@ from pinecone import Pinecone
 
 
 PINECONE_API_KEY = Path("~/pinecone-api-key.txt").expanduser().read_text(encoding="utf-8").splitlines()[0].strip()
-PINECONE_INDEX  = "scifact"
+PINECONE_INDEX  = "project1-rag-index"
 PINECONE_NS     = "chunk1000"
+
+
+def load_docs(docs_path):
+    docs = {}
+    for f in sorted(os.listdir(docs_path)):
+        if f.endswith(".rst"):
+            with open(os.path.join(docs_path, f), "r", encoding="utf-8") as fh:
+                docs[f] = fh.read()
+    return docs
+
+
+def create_chunks(docs, chunk_size=1000, chunk_overlap=150):
+    splitter = RecursiveCharacterTextSplitter(
+        chunk_size=chunk_size,
+        chunk_overlap=chunk_overlap,
+        separators=["\n\n", "\n", ".", " ", ""],
+        add_start_index=True,
+    )
+    documents = []
+    for fname, content in docs.items():
+        chunks = splitter.create_documents([content], metadatas=[{"source": fname}])
+        for i, chunk in enumerate(chunks):
+            start = chunk.metadata["start_index"]
+            line_start = content[:start].count("\n") + 1
+            line_end   = line_start + chunk.page_content.count("\n")
+            chunk.metadata.update({
+                "chunk_index": i,
+                "line_start": line_start,
+                "line_end": line_end,
+            })
+            documents.append(chunk)
+    return documents
 
 
 def load_api_key():
@@ -46,8 +78,6 @@ def resolve_index_name(pc, preferred):
     if available:
         print(f"Index '{preferred}' not found — using '{available[0]}' instead.")
         return available[0]
-    raise RuntimeError("No Pinecone indexes found. Check PINECONE_API_KEY.")
-
 
 def build_pinecone_retriever(k=10):
     embeddings = HuggingFaceEmbeddings(
@@ -102,10 +132,41 @@ def load_validation_json(json_path):
 if __name__ == "__main__":
     
     arg_parser = argparse.ArgumentParser()
-    arg_parser.add_argument("--input", required=True, help="Path to input file")
-    arg_parser.add_argument("--output", required=True, help="Path to output file")
+    arg_parser.add_argument("--input",      required=False, help="Path to input validation JSON")
+    arg_parser.add_argument("--output",     required=False, help="Path to output JSON")
+    arg_parser.add_argument("--upload",     action="store_true", help="Upload docs to Pinecone instead of running queries")
+    arg_parser.add_argument("--docs",       default="project1_export/sourcedocs", help="Path to .rst source docs (used with --upload)")
+    arg_parser.add_argument("--namespace",  default="chunk1000",                  help="Pinecone namespace (used with --upload)")
+    arg_parser.add_argument("--chunk-size", default=1000, type=int,               help="Chunk size (used with --upload)")
+    arg_parser.add_argument("--overlap",    default=150,  type=int,               help="Chunk overlap (used with --upload)")
 
     args = arg_parser.parse_args()
+
+    if args.upload:
+        print(f"Loading docs from: {args.docs}")
+        docs = load_docs(args.docs)
+        print(f"  {len(docs)} files loaded")
+        print(f"Chunking (size={args.chunk_size}, overlap={args.overlap}) ...")
+        documents = create_chunks(docs, chunk_size=args.chunk_size, chunk_overlap=args.overlap)
+        print(f"  {len(documents)} chunks created")
+        print("Loading embeddings model ...")
+        embeddings = HuggingFaceEmbeddings(
+            model_name="BAAI/bge-small-en-v1.5",
+            model_kwargs={"device": "cpu"},
+            encode_kwargs={"normalize_embeddings": True},
+        )
+        print(f"Uploading to Pinecone index='{PINECONE_INDEX}' namespace='{args.namespace}' ...")
+        pc = Pinecone(api_key=PINECONE_API_KEY)
+        index = pc.Index(PINECONE_INDEX)
+        vector_store = PineconeVectorStore(index=index, embedding=embeddings, namespace=args.namespace)
+        vector_store.add_documents(documents)
+        print("Done.")
+        stats = index.describe_index_stats()
+        print(f"Index stats: {stats}")
+        exit(0)
+
+    if not args.input or not args.output:
+        arg_parser.error("--input and --output are required when not using --upload")
 
     api_key = load_api_key()
 
