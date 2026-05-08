@@ -8,8 +8,6 @@ from langchain_text_splitters import RecursiveCharacterTextSplitter
 # from uuid import uuid4
 import openai
 import json
-import pathlib
-from pathlib import Path
 
 from langchain_huggingface import HuggingFaceEmbeddings
 from langchain_pinecone import PineconeVectorStore
@@ -21,7 +19,7 @@ from langchain_community.cross_encoders import HuggingFaceCrossEncoder
 # from langchain.retrievers import EnsembleRetriever
 
 
-PINECONE_API_KEY = Path("~/pinecone-api-key.txt").expanduser().read_text(encoding="utf-8").splitlines()[0].strip()
+PINECONE_API_KEY = "pcsk_2tcezv_7jy9qpkh9jFf2xGFPU1LSDCvdjmWGTvRLdGcAgUUzEfXKmkaFHzpztoPbwpDVE9"
 PINECONE_INDEX  = "project1-rag-index"
 PINECONE_NS     = "chunk1000"
 K = 5
@@ -58,18 +56,17 @@ def create_chunks(docs, chunk_size=1000, chunk_overlap=150):
     return documents
 
 
-def load_api_key():
+def load_api_key(apikey_txt=None):
     api_key = os.getenv("API_KEY")
     if api_key:
         return api_key
 
+    file_path = os.path.expanduser(apikey_txt) if apikey_txt else os.path.expanduser("~/api-key.txt")
     try:
-        file_path = os.path.expanduser("~/api-key.txt")
-
         with open(file_path, "r") as f:
             return f.read().strip()
     except FileNotFoundError:
-        raise ValueError("API key was not found in environment or api_key.txt")
+        raise ValueError(f"API key not found at {file_path}")
 
 def resolve_index_name(pc, preferred):
     available = [idx.name for idx in pc.list_indexes()]
@@ -93,13 +90,14 @@ def build_pinecone_retriever(k=K):
     return ContextualCompressionRetriever(base_compressor=reranker, base_retriever=base_retriever)
 
 
-def llm_response(query, docs, api_key):
+def llm_response(query, docs, api_key, generation_model="claude-sonnet-4-6"):
     context = ""
     for doc in docs:
         context += doc.page_content + "\n"
     llm = openai.OpenAI(api_key=api_key, base_url="https://tritonai-api.ucsd.edu")
     response = llm.chat.completions.create(
-        model="claude-sonnet-4-6",
+        model=generation_model,
+        temperature=0,
         messages=[
         {
             "role": "user",
@@ -122,6 +120,9 @@ if __name__ == "__main__":
     arg_parser = argparse.ArgumentParser()
     arg_parser.add_argument("--input", required=False, help="Path to input validation JSON")
     arg_parser.add_argument("--output", required=False, help="Path to output JSON")
+    arg_parser.add_argument("--corpus-dir", default=None, help="Root of the .rst corpus (ignored; using Pinecone)")
+    arg_parser.add_argument("--apikey-txt", default=None, help="Path to TritonAI gateway API key text file")
+    arg_parser.add_argument("--generation-model", default="claude-sonnet-4-6", help="Gateway model id for generation (e.g. claude-sonnet-4-6, api-gpt-oss-120b)")
     arg_parser.add_argument("--upload", action="store_true", help="Upload docs to Pinecone instead of running queries")
     arg_parser.add_argument("--docs", default="project1_export/sourcedocs", help="Path to .rst source docs (used with --upload)")
     arg_parser.add_argument("--namespace", default="chunk1000", help="Pinecone namespace (used with --upload)")
@@ -156,7 +157,7 @@ if __name__ == "__main__":
     if not args.input or not args.output:
         arg_parser.error("--input and --output are required when not using --upload")
 
-    api_key = load_api_key()
+    api_key = load_api_key(args.apikey_txt)
 
     retriever = build_pinecone_retriever(k=K)
 
@@ -179,7 +180,7 @@ if __name__ == "__main__":
             print(f"  file={md['source']!r}  lines=[{md['line_start']},{md['line_end']}]")
             print(f"     text: {d.page_content[:140].replace(chr(10),' ')}")
 
-        response, context = llm_response(question, docs, api_key)
+        response, context = llm_response(question, docs, api_key, args.generation_model)
         print(f"Answer for question {question_id}: {response}")
 
         sources = []
