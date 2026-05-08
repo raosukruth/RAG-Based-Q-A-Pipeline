@@ -88,7 +88,7 @@ def build_pinecone_retriever(k=K):
     index = pc.Index(index_name)
     vector_store = PineconeVectorStore(index=index, embedding=embeddings, namespace=PINECONE_NS)
     base_retriever = vector_store.as_retriever(search_type="similarity", search_kwargs={"k": k})
-    cross_encoder = HuggingFaceCrossEncoder(model_name="BAAI/bge-reranker-base", model_kwargs={"device": "cpu"})
+    cross_encoder = HuggingFaceCrossEncoder(model_name="cross-encoder/ms-marco-MiniLM-L-4-v2", model_kwargs={"device": "cpu"})
     reranker = CrossEncoderReranker(model=cross_encoder, top_n=k)
     return ContextualCompressionRetriever(base_compressor=reranker, base_retriever=base_retriever)
 
@@ -99,7 +99,7 @@ def llm_response(query, docs, api_key):
         context += doc.page_content + "\n"
     llm = openai.OpenAI(api_key=api_key, base_url="https://tritonai-api.ucsd.edu")
     response = llm.chat.completions.create(
-        model="api-mistral-small-3.2-2506",
+        model="claude-sonnet-4-6",
         messages=[
         {
             "role": "user",
