@@ -1,4 +1,3 @@
-rapidfireai
 openai
 pandas
 datasets
