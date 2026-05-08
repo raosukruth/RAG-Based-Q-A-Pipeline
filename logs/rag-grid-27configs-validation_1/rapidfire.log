@@ -1,0 +1,792 @@
+2026-05-07 13:47:34 | DocProcessingActor | INFO | doc_actor.py:59 | [rag-grid-27configs-validation_1:DocProcessingActor] DocProcessingActor initialized
+2026-05-07 13:47:34 | DocProcessingActor | INFO | doc_actor.py:59 | [rag-grid-27configs-validation_1:DocProcessingActor] DocProcessingActor initialized
+2026-05-07 13:47:35 | DocProcessingActor | INFO | doc_actor.py:59 | [rag-grid-27configs-validation_1:DocProcessingActor] DocProcessingActor initialized
+2026-05-07 13:47:35 | DocProcessingActor | INFO | doc_actor.py:96 | [rag-grid-27configs-validation_1:DocProcessingActor] DocProcessingActor: Starting context initialization...
+2026-05-07 13:47:35 | DocProcessingActor | INFO | doc_actor.py:107 | [rag-grid-27configs-validation_1:DocProcessingActor] Building document index...
+2026-05-07 13:47:35 | DocProcessingActor | INFO | doc_actor.py:96 | [rag-grid-27configs-validation_1:DocProcessingActor] DocProcessingActor: Starting context initialization...
+2026-05-07 13:47:35 | DocProcessingActor | INFO | doc_actor.py:107 | [rag-grid-27configs-validation_1:DocProcessingActor] Building document index...
+2026-05-07 13:47:35 | sentence_transformers.base.model | INFO | model.py:973 | Loading SentenceTransformer model from BAAI/bge-small-en-v1.5.
+2026-05-07 13:47:36 | sentence_transformers.base.model | INFO | model.py:973 | Loading SentenceTransformer model from BAAI/bge-small-en-v1.5.
+2026-05-07 13:47:36 | DocProcessingActor | INFO | doc_actor.py:96 | [rag-grid-27configs-validation_1:DocProcessingActor] DocProcessingActor: Starting context initialization...
+2026-05-07 13:47:36 | DocProcessingActor | INFO | doc_actor.py:107 | [rag-grid-27configs-validation_1:DocProcessingActor] Building document index...
+2026-05-07 13:47:36 | sentence_transformers.base.model | INFO | model.py:973 | Loading SentenceTransformer model from BAAI/bge-small-en-v1.5.
+2026-05-07 13:47:37 | sentence_transformers.base.model | INFO | model.py:962 | No modules.json found for cross-encoder/ms-marco-MiniLM-L-4-v2, initializing a new CrossEncoder model.
+2026-05-07 13:47:37 | sentence_transformers.base.model | INFO | model.py:962 | No modules.json found for cross-encoder/ms-marco-MiniLM-L-4-v2, initializing a new CrossEncoder model.
+2026-05-07 13:47:38 | sentence_transformers.base.model | INFO | model.py:962 | No modules.json found for cross-encoder/ms-marco-MiniLM-L-4-v2, initializing a new CrossEncoder model.
+2026-05-07 13:47:40 | DocProcessingActor | INFO | doc_actor.py:109 | [rag-grid-27configs-validation_1:DocProcessingActor] Document index built successfully
+2026-05-07 13:47:40 | DocProcessingActor | INFO | doc_actor.py:156 | [rag-grid-27configs-validation_1:DocProcessingActor] Serializing PineconeVector store for cross-actor sharing...
+2026-05-07 13:47:40 | DocProcessingActor | INFO | doc_actor.py:165 | [rag-grid-27configs-validation_1:DocProcessingActor] Pinecone index name: project1-rag-index
+2026-05-07 13:47:40 | DocProcessingActor | INFO | doc_actor.py:189 | [rag-grid-27configs-validation_1:DocProcessingActor] DocProcessingActor: Context components ready for sharing
+2026-05-07 13:47:40 | DocProcessingActor | INFO | doc_actor.py:109 | [rag-grid-27configs-validation_1:DocProcessingActor] Document index built successfully
+2026-05-07 13:47:40 | DocProcessingActor | INFO | doc_actor.py:156 | [rag-grid-27configs-validation_1:DocProcessingActor] Serializing PineconeVector store for cross-actor sharing...
+2026-05-07 13:47:40 | DocProcessingActor | INFO | doc_actor.py:165 | [rag-grid-27configs-validation_1:DocProcessingActor] Pinecone index name: project1-rag-index
+2026-05-07 13:47:40 | DocProcessingActor | INFO | doc_actor.py:189 | [rag-grid-27configs-validation_1:DocProcessingActor] DocProcessingActor: Context components ready for sharing
+2026-05-07 13:47:40 | DocProcessingActor | INFO | doc_actor.py:109 | [rag-grid-27configs-validation_1:DocProcessingActor] Document index built successfully
+2026-05-07 13:47:40 | DocProcessingActor | INFO | doc_actor.py:156 | [rag-grid-27configs-validation_1:DocProcessingActor] Serializing PineconeVector store for cross-actor sharing...
+2026-05-07 13:47:40 | DocProcessingActor | INFO | doc_actor.py:165 | [rag-grid-27configs-validation_1:DocProcessingActor] Pinecone index name: project1-rag-index
+2026-05-07 13:47:40 | DocProcessingActor | INFO | doc_actor.py:189 | [rag-grid-27configs-validation_1:DocProcessingActor] DocProcessingActor: Context components ready for sharing
+2026-05-07 13:48:03 | QueryProcessingActor-0 | INFO | query_actor.py:165 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Initializing new inference engine (config hash: 6350d6d9)
+2026-05-07 13:48:03 | sentence_transformers.base.model | INFO | model.py:973 | Loading SentenceTransformer model from BAAI/bge-small-en-v1.5.
+2026-05-07 13:48:05 | QueryProcessingActor-0 | INFO | query_actor.py:198 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Recreated embedding function: HuggingFaceEmbeddings
+2026-05-07 13:48:05 | QueryProcessingActor-0 | INFO | query_actor.py:260 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Recreated retriever with search_type=similarity
+2026-05-07 13:48:05 | sentence_transformers.base.model | INFO | model.py:962 | No modules.json found for cross-encoder/ms-marco-MiniLM-L-4-v2, initializing a new CrossEncoder model.
+2026-05-07 13:48:08 | QueryProcessingActor-0 | INFO | query_actor.py:277 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Recreated RAG spec with retrieval mode
+2026-05-07 13:48:16 | QueryProcessingActor-0 | INFO | query_actor.py:169 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Reusing existing inference engine (config hash: 6350d6d9)
+2026-05-07 13:48:16 | sentence_transformers.base.model | INFO | model.py:973 | Loading SentenceTransformer model from BAAI/bge-small-en-v1.5.
+2026-05-07 13:48:18 | QueryProcessingActor-0 | INFO | query_actor.py:198 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Recreated embedding function: HuggingFaceEmbeddings
+2026-05-07 13:48:18 | QueryProcessingActor-0 | INFO | query_actor.py:260 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Recreated retriever with search_type=similarity
+2026-05-07 13:48:18 | sentence_transformers.base.model | INFO | model.py:962 | No modules.json found for BAAI/bge-reranker-base, initializing a new CrossEncoder model.
+2026-05-07 13:48:20 | QueryProcessingActor-0 | INFO | query_actor.py:277 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Recreated RAG spec with retrieval mode
+2026-05-07 13:48:31 | QueryProcessingActor-0 | INFO | query_actor.py:169 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Reusing existing inference engine (config hash: 6350d6d9)
+2026-05-07 13:48:31 | sentence_transformers.base.model | INFO | model.py:973 | Loading SentenceTransformer model from BAAI/bge-small-en-v1.5.
+2026-05-07 13:48:33 | QueryProcessingActor-0 | INFO | query_actor.py:198 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Recreated embedding function: HuggingFaceEmbeddings
+2026-05-07 13:48:33 | QueryProcessingActor-0 | INFO | query_actor.py:260 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Recreated retriever with search_type=similarity
+2026-05-07 13:48:33 | QueryProcessingActor-0 | INFO | query_actor.py:277 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Recreated RAG spec with retrieval mode
+2026-05-07 13:48:40 | QueryProcessingActor-0 | INFO | query_actor.py:169 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Reusing existing inference engine (config hash: 6350d6d9)
+2026-05-07 13:48:41 | sentence_transformers.base.model | INFO | model.py:973 | Loading SentenceTransformer model from BAAI/bge-small-en-v1.5.
+2026-05-07 13:48:42 | QueryProcessingActor-0 | INFO | query_actor.py:198 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Recreated embedding function: HuggingFaceEmbeddings
+2026-05-07 13:48:42 | QueryProcessingActor-0 | INFO | query_actor.py:260 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Recreated retriever with search_type=mmr
+2026-05-07 13:48:42 | sentence_transformers.base.model | INFO | model.py:962 | No modules.json found for cross-encoder/ms-marco-MiniLM-L-4-v2, initializing a new CrossEncoder model.
+2026-05-07 13:48:45 | QueryProcessingActor-0 | INFO | query_actor.py:277 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Recreated RAG spec with retrieval mode
+2026-05-07 13:48:53 | QueryProcessingActor-0 | INFO | query_actor.py:169 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Reusing existing inference engine (config hash: 6350d6d9)
+2026-05-07 13:48:53 | sentence_transformers.base.model | INFO | model.py:973 | Loading SentenceTransformer model from BAAI/bge-small-en-v1.5.
+2026-05-07 13:48:55 | QueryProcessingActor-0 | INFO | query_actor.py:198 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Recreated embedding function: HuggingFaceEmbeddings
+2026-05-07 13:48:55 | QueryProcessingActor-0 | INFO | query_actor.py:260 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Recreated retriever with search_type=mmr
+2026-05-07 13:48:55 | sentence_transformers.base.model | INFO | model.py:962 | No modules.json found for BAAI/bge-reranker-base, initializing a new CrossEncoder model.
+2026-05-07 13:48:57 | QueryProcessingActor-0 | INFO | query_actor.py:277 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Recreated RAG spec with retrieval mode
+2026-05-07 13:49:08 | QueryProcessingActor-0 | INFO | query_actor.py:169 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Reusing existing inference engine (config hash: 6350d6d9)
+2026-05-07 13:49:09 | sentence_transformers.base.model | INFO | model.py:973 | Loading SentenceTransformer model from BAAI/bge-small-en-v1.5.
+2026-05-07 13:49:10 | QueryProcessingActor-0 | INFO | query_actor.py:198 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Recreated embedding function: HuggingFaceEmbeddings
+2026-05-07 13:49:10 | QueryProcessingActor-0 | INFO | query_actor.py:260 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Recreated retriever with search_type=mmr
+2026-05-07 13:49:10 | QueryProcessingActor-0 | INFO | query_actor.py:277 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Recreated RAG spec with retrieval mode
+2026-05-07 13:49:20 | QueryProcessingActor-0 | INFO | query_actor.py:169 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Reusing existing inference engine (config hash: 6350d6d9)
+2026-05-07 13:49:20 | sentence_transformers.base.model | INFO | model.py:973 | Loading SentenceTransformer model from BAAI/bge-small-en-v1.5.
+2026-05-07 13:49:21 | QueryProcessingActor-0 | INFO | query_actor.py:198 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Recreated embedding function: HuggingFaceEmbeddings
+2026-05-07 13:49:21 | QueryProcessingActor-0 | INFO | query_actor.py:260 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Recreated retriever with search_type=similarity_score_threshold
+2026-05-07 13:49:22 | sentence_transformers.base.model | INFO | model.py:962 | No modules.json found for cross-encoder/ms-marco-MiniLM-L-4-v2, initializing a new CrossEncoder model.
+2026-05-07 13:49:24 | QueryProcessingActor-0 | INFO | query_actor.py:277 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Recreated RAG spec with retrieval mode
+2026-05-07 13:49:31 | QueryProcessingActor-0 | INFO | query_actor.py:169 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Reusing existing inference engine (config hash: 6350d6d9)
+2026-05-07 13:49:31 | sentence_transformers.base.model | INFO | model.py:973 | Loading SentenceTransformer model from BAAI/bge-small-en-v1.5.
+2026-05-07 13:49:33 | QueryProcessingActor-0 | INFO | query_actor.py:198 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Recreated embedding function: HuggingFaceEmbeddings
+2026-05-07 13:49:33 | QueryProcessingActor-0 | INFO | query_actor.py:260 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Recreated retriever with search_type=similarity_score_threshold
+2026-05-07 13:49:33 | sentence_transformers.base.model | INFO | model.py:962 | No modules.json found for BAAI/bge-reranker-base, initializing a new CrossEncoder model.
+2026-05-07 13:49:36 | QueryProcessingActor-0 | INFO | query_actor.py:277 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Recreated RAG spec with retrieval mode
+2026-05-07 13:49:45 | QueryProcessingActor-0 | INFO | query_actor.py:169 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Reusing existing inference engine (config hash: 6350d6d9)
+2026-05-07 13:49:45 | sentence_transformers.base.model | INFO | model.py:973 | Loading SentenceTransformer model from BAAI/bge-small-en-v1.5.
+2026-05-07 13:49:47 | QueryProcessingActor-0 | INFO | query_actor.py:198 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Recreated embedding function: HuggingFaceEmbeddings
+2026-05-07 13:49:47 | QueryProcessingActor-0 | INFO | query_actor.py:260 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Recreated retriever with search_type=similarity_score_threshold
+2026-05-07 13:49:47 | QueryProcessingActor-0 | INFO | query_actor.py:277 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Recreated RAG spec with retrieval mode
+2026-05-07 13:49:57 | QueryProcessingActor-0 | INFO | query_actor.py:169 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Reusing existing inference engine (config hash: 6350d6d9)
+2026-05-07 13:49:58 | sentence_transformers.base.model | INFO | model.py:973 | Loading SentenceTransformer model from BAAI/bge-small-en-v1.5.
+2026-05-07 13:49:59 | QueryProcessingActor-0 | INFO | query_actor.py:198 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Recreated embedding function: HuggingFaceEmbeddings
+2026-05-07 13:49:59 | QueryProcessingActor-0 | INFO | query_actor.py:260 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Recreated retriever with search_type=similarity
+2026-05-07 13:50:00 | sentence_transformers.base.model | INFO | model.py:962 | No modules.json found for cross-encoder/ms-marco-MiniLM-L-4-v2, initializing a new CrossEncoder model.
+2026-05-07 13:50:02 | QueryProcessingActor-0 | INFO | query_actor.py:277 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Recreated RAG spec with retrieval mode
+2026-05-07 13:50:11 | QueryProcessingActor-0 | INFO | query_actor.py:169 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Reusing existing inference engine (config hash: 6350d6d9)
+2026-05-07 13:50:11 | sentence_transformers.base.model | INFO | model.py:973 | Loading SentenceTransformer model from BAAI/bge-small-en-v1.5.
+2026-05-07 13:50:13 | QueryProcessingActor-0 | INFO | query_actor.py:198 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Recreated embedding function: HuggingFaceEmbeddings
+2026-05-07 13:50:13 | QueryProcessingActor-0 | INFO | query_actor.py:260 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Recreated retriever with search_type=similarity
+2026-05-07 13:50:13 | sentence_transformers.base.model | INFO | model.py:962 | No modules.json found for BAAI/bge-reranker-base, initializing a new CrossEncoder model.
+2026-05-07 13:50:16 | QueryProcessingActor-0 | INFO | query_actor.py:277 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Recreated RAG spec with retrieval mode
+2026-05-07 13:50:29 | QueryProcessingActor-0 | INFO | query_actor.py:169 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Reusing existing inference engine (config hash: 6350d6d9)
+2026-05-07 13:50:29 | sentence_transformers.base.model | INFO | model.py:973 | Loading SentenceTransformer model from BAAI/bge-small-en-v1.5.
+2026-05-07 13:50:31 | QueryProcessingActor-0 | INFO | query_actor.py:198 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Recreated embedding function: HuggingFaceEmbeddings
+2026-05-07 13:50:31 | QueryProcessingActor-0 | INFO | query_actor.py:260 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Recreated retriever with search_type=similarity
+2026-05-07 13:50:31 | QueryProcessingActor-0 | INFO | query_actor.py:277 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Recreated RAG spec with retrieval mode
+2026-05-07 13:50:40 | QueryProcessingActor-0 | INFO | query_actor.py:169 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Reusing existing inference engine (config hash: 6350d6d9)
+2026-05-07 13:50:40 | sentence_transformers.base.model | INFO | model.py:973 | Loading SentenceTransformer model from BAAI/bge-small-en-v1.5.
+2026-05-07 13:50:42 | QueryProcessingActor-0 | INFO | query_actor.py:198 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Recreated embedding function: HuggingFaceEmbeddings
+2026-05-07 13:50:42 | QueryProcessingActor-0 | INFO | query_actor.py:260 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Recreated retriever with search_type=mmr
+2026-05-07 13:50:42 | sentence_transformers.base.model | INFO | model.py:962 | No modules.json found for cross-encoder/ms-marco-MiniLM-L-4-v2, initializing a new CrossEncoder model.
+2026-05-07 13:50:44 | QueryProcessingActor-0 | INFO | query_actor.py:277 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Recreated RAG spec with retrieval mode
+2026-05-07 13:50:53 | QueryProcessingActor-0 | INFO | query_actor.py:169 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Reusing existing inference engine (config hash: 6350d6d9)
+2026-05-07 13:50:53 | sentence_transformers.base.model | INFO | model.py:973 | Loading SentenceTransformer model from BAAI/bge-small-en-v1.5.
+2026-05-07 13:50:55 | QueryProcessingActor-0 | INFO | query_actor.py:198 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Recreated embedding function: HuggingFaceEmbeddings
+2026-05-07 13:50:55 | QueryProcessingActor-0 | INFO | query_actor.py:260 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Recreated retriever with search_type=mmr
+2026-05-07 13:50:55 | sentence_transformers.base.model | INFO | model.py:962 | No modules.json found for BAAI/bge-reranker-base, initializing a new CrossEncoder model.
+2026-05-07 13:50:57 | QueryProcessingActor-0 | INFO | query_actor.py:277 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Recreated RAG spec with retrieval mode
+2026-05-07 13:51:09 | QueryProcessingActor-0 | INFO | query_actor.py:169 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Reusing existing inference engine (config hash: 6350d6d9)
+2026-05-07 13:51:09 | sentence_transformers.base.model | INFO | model.py:973 | Loading SentenceTransformer model from BAAI/bge-small-en-v1.5.
+2026-05-07 13:51:11 | QueryProcessingActor-0 | INFO | query_actor.py:198 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Recreated embedding function: HuggingFaceEmbeddings
+2026-05-07 13:51:11 | QueryProcessingActor-0 | INFO | query_actor.py:260 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Recreated retriever with search_type=mmr
+2026-05-07 13:51:11 | QueryProcessingActor-0 | INFO | query_actor.py:277 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Recreated RAG spec with retrieval mode
+2026-05-07 13:51:20 | QueryProcessingActor-0 | INFO | query_actor.py:169 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Reusing existing inference engine (config hash: 6350d6d9)
+2026-05-07 13:51:20 | sentence_transformers.base.model | INFO | model.py:973 | Loading SentenceTransformer model from BAAI/bge-small-en-v1.5.
+2026-05-07 13:51:22 | QueryProcessingActor-0 | INFO | query_actor.py:198 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Recreated embedding function: HuggingFaceEmbeddings
+2026-05-07 13:51:22 | QueryProcessingActor-0 | INFO | query_actor.py:260 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Recreated retriever with search_type=similarity_score_threshold
+2026-05-07 13:51:22 | sentence_transformers.base.model | INFO | model.py:962 | No modules.json found for cross-encoder/ms-marco-MiniLM-L-4-v2, initializing a new CrossEncoder model.
+2026-05-07 13:51:25 | QueryProcessingActor-0 | INFO | query_actor.py:277 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Recreated RAG spec with retrieval mode
+2026-05-07 13:51:33 | QueryProcessingActor-0 | INFO | query_actor.py:169 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Reusing existing inference engine (config hash: 6350d6d9)
+2026-05-07 13:51:34 | sentence_transformers.base.model | INFO | model.py:973 | Loading SentenceTransformer model from BAAI/bge-small-en-v1.5.
+2026-05-07 13:51:35 | QueryProcessingActor-0 | INFO | query_actor.py:198 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Recreated embedding function: HuggingFaceEmbeddings
+2026-05-07 13:51:35 | QueryProcessingActor-0 | INFO | query_actor.py:260 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Recreated retriever with search_type=similarity_score_threshold
+2026-05-07 13:51:35 | sentence_transformers.base.model | INFO | model.py:962 | No modules.json found for BAAI/bge-reranker-base, initializing a new CrossEncoder model.
+2026-05-07 13:51:38 | QueryProcessingActor-0 | INFO | query_actor.py:277 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Recreated RAG spec with retrieval mode
+2026-05-07 13:51:49 | QueryProcessingActor-0 | INFO | query_actor.py:169 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Reusing existing inference engine (config hash: 6350d6d9)
+2026-05-07 13:51:50 | sentence_transformers.base.model | INFO | model.py:973 | Loading SentenceTransformer model from BAAI/bge-small-en-v1.5.
+2026-05-07 13:51:51 | QueryProcessingActor-0 | INFO | query_actor.py:198 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Recreated embedding function: HuggingFaceEmbeddings
+2026-05-07 13:51:51 | QueryProcessingActor-0 | INFO | query_actor.py:260 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Recreated retriever with search_type=similarity_score_threshold
+2026-05-07 13:51:51 | QueryProcessingActor-0 | INFO | query_actor.py:277 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Recreated RAG spec with retrieval mode
+2026-05-07 13:51:59 | QueryProcessingActor-0 | INFO | query_actor.py:169 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Reusing existing inference engine (config hash: 6350d6d9)
+2026-05-07 13:51:59 | sentence_transformers.base.model | INFO | model.py:973 | Loading SentenceTransformer model from BAAI/bge-small-en-v1.5.
+2026-05-07 13:52:01 | QueryProcessingActor-0 | INFO | query_actor.py:198 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Recreated embedding function: HuggingFaceEmbeddings
+2026-05-07 13:52:01 | QueryProcessingActor-0 | INFO | query_actor.py:260 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Recreated retriever with search_type=similarity
+2026-05-07 13:52:01 | sentence_transformers.base.model | INFO | model.py:962 | No modules.json found for cross-encoder/ms-marco-MiniLM-L-4-v2, initializing a new CrossEncoder model.
+2026-05-07 13:52:04 | QueryProcessingActor-0 | INFO | query_actor.py:277 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Recreated RAG spec with retrieval mode
+2026-05-07 13:52:15 | QueryProcessingActor-0 | INFO | query_actor.py:169 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Reusing existing inference engine (config hash: 6350d6d9)
+2026-05-07 13:52:15 | sentence_transformers.base.model | INFO | model.py:973 | Loading SentenceTransformer model from BAAI/bge-small-en-v1.5.
+2026-05-07 13:52:17 | QueryProcessingActor-0 | INFO | query_actor.py:198 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Recreated embedding function: HuggingFaceEmbeddings
+2026-05-07 13:52:17 | QueryProcessingActor-0 | INFO | query_actor.py:260 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Recreated retriever with search_type=similarity
+2026-05-07 13:52:17 | sentence_transformers.base.model | INFO | model.py:962 | No modules.json found for BAAI/bge-reranker-base, initializing a new CrossEncoder model.
+2026-05-07 13:52:19 | QueryProcessingActor-0 | INFO | query_actor.py:277 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Recreated RAG spec with retrieval mode
+2026-05-07 13:52:38 | QueryProcessingActor-0 | INFO | query_actor.py:169 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Reusing existing inference engine (config hash: 6350d6d9)
+2026-05-07 13:52:38 | sentence_transformers.base.model | INFO | model.py:973 | Loading SentenceTransformer model from BAAI/bge-small-en-v1.5.
+2026-05-07 13:52:40 | QueryProcessingActor-0 | INFO | query_actor.py:198 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Recreated embedding function: HuggingFaceEmbeddings
+2026-05-07 13:52:40 | QueryProcessingActor-0 | INFO | query_actor.py:260 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Recreated retriever with search_type=similarity
+2026-05-07 13:52:40 | QueryProcessingActor-0 | INFO | query_actor.py:277 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Recreated RAG spec with retrieval mode
+2026-05-07 13:52:56 | QueryProcessingActor-0 | INFO | query_actor.py:169 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Reusing existing inference engine (config hash: 6350d6d9)
+2026-05-07 13:52:56 | sentence_transformers.base.model | INFO | model.py:973 | Loading SentenceTransformer model from BAAI/bge-small-en-v1.5.
+2026-05-07 13:52:58 | QueryProcessingActor-0 | INFO | query_actor.py:198 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Recreated embedding function: HuggingFaceEmbeddings
+2026-05-07 13:52:58 | QueryProcessingActor-0 | INFO | query_actor.py:260 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Recreated retriever with search_type=mmr
+2026-05-07 13:52:58 | sentence_transformers.base.model | INFO | model.py:962 | No modules.json found for cross-encoder/ms-marco-MiniLM-L-4-v2, initializing a new CrossEncoder model.
+2026-05-07 13:53:01 | QueryProcessingActor-0 | INFO | query_actor.py:277 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Recreated RAG spec with retrieval mode
+2026-05-07 13:53:20 | QueryProcessingActor-0 | INFO | query_actor.py:169 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Reusing existing inference engine (config hash: 6350d6d9)
+2026-05-07 13:53:21 | sentence_transformers.base.model | INFO | model.py:973 | Loading SentenceTransformer model from BAAI/bge-small-en-v1.5.
+2026-05-07 13:53:22 | QueryProcessingActor-0 | INFO | query_actor.py:198 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Recreated embedding function: HuggingFaceEmbeddings
+2026-05-07 13:53:22 | QueryProcessingActor-0 | INFO | query_actor.py:260 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Recreated retriever with search_type=mmr
+2026-05-07 13:53:22 | sentence_transformers.base.model | INFO | model.py:962 | No modules.json found for BAAI/bge-reranker-base, initializing a new CrossEncoder model.
+2026-05-07 13:53:25 | QueryProcessingActor-0 | INFO | query_actor.py:277 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Recreated RAG spec with retrieval mode
+2026-05-07 13:53:48 | QueryProcessingActor-0 | INFO | query_actor.py:169 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Reusing existing inference engine (config hash: 6350d6d9)
+2026-05-07 13:53:48 | sentence_transformers.base.model | INFO | model.py:973 | Loading SentenceTransformer model from BAAI/bge-small-en-v1.5.
+2026-05-07 13:53:50 | QueryProcessingActor-0 | INFO | query_actor.py:198 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Recreated embedding function: HuggingFaceEmbeddings
+2026-05-07 13:53:50 | QueryProcessingActor-0 | INFO | query_actor.py:260 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Recreated retriever with search_type=mmr
+2026-05-07 13:53:50 | QueryProcessingActor-0 | INFO | query_actor.py:277 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Recreated RAG spec with retrieval mode
+2026-05-07 13:54:02 | QueryProcessingActor-0 | INFO | query_actor.py:169 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Reusing existing inference engine (config hash: 6350d6d9)
+2026-05-07 13:54:03 | sentence_transformers.base.model | INFO | model.py:973 | Loading SentenceTransformer model from BAAI/bge-small-en-v1.5.
+2026-05-07 13:54:04 | QueryProcessingActor-0 | INFO | query_actor.py:198 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Recreated embedding function: HuggingFaceEmbeddings
+2026-05-07 13:54:04 | QueryProcessingActor-0 | INFO | query_actor.py:260 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Recreated retriever with search_type=similarity_score_threshold
+2026-05-07 13:54:04 | sentence_transformers.base.model | INFO | model.py:962 | No modules.json found for cross-encoder/ms-marco-MiniLM-L-4-v2, initializing a new CrossEncoder model.
+2026-05-07 13:54:07 | QueryProcessingActor-0 | INFO | query_actor.py:277 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Recreated RAG spec with retrieval mode
+2026-05-07 13:54:18 | QueryProcessingActor-0 | INFO | query_actor.py:169 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Reusing existing inference engine (config hash: 6350d6d9)
+2026-05-07 13:54:18 | sentence_transformers.base.model | INFO | model.py:973 | Loading SentenceTransformer model from BAAI/bge-small-en-v1.5.
+2026-05-07 13:54:20 | QueryProcessingActor-0 | INFO | query_actor.py:198 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Recreated embedding function: HuggingFaceEmbeddings
+2026-05-07 13:54:20 | QueryProcessingActor-0 | INFO | query_actor.py:260 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Recreated retriever with search_type=similarity_score_threshold
+2026-05-07 13:54:20 | sentence_transformers.base.model | INFO | model.py:962 | No modules.json found for BAAI/bge-reranker-base, initializing a new CrossEncoder model.
+2026-05-07 13:54:22 | QueryProcessingActor-0 | INFO | query_actor.py:277 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Recreated RAG spec with retrieval mode
+2026-05-07 13:54:38 | QueryProcessingActor-0 | INFO | query_actor.py:169 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Reusing existing inference engine (config hash: 6350d6d9)
+2026-05-07 13:54:38 | sentence_transformers.base.model | INFO | model.py:973 | Loading SentenceTransformer model from BAAI/bge-small-en-v1.5.
+2026-05-07 13:54:40 | QueryProcessingActor-0 | INFO | query_actor.py:198 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Recreated embedding function: HuggingFaceEmbeddings
+2026-05-07 13:54:40 | QueryProcessingActor-0 | INFO | query_actor.py:260 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Recreated retriever with search_type=similarity_score_threshold
+2026-05-07 13:54:40 | QueryProcessingActor-0 | INFO | query_actor.py:277 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Recreated RAG spec with retrieval mode
+2026-05-07 13:54:48 | QueryProcessingActor-0 | INFO | query_actor.py:169 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Reusing existing inference engine (config hash: 6350d6d9)
+2026-05-07 13:54:49 | sentence_transformers.base.model | INFO | model.py:973 | Loading SentenceTransformer model from BAAI/bge-small-en-v1.5.
+2026-05-07 13:54:50 | QueryProcessingActor-0 | INFO | query_actor.py:198 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Recreated embedding function: HuggingFaceEmbeddings
+2026-05-07 13:54:50 | QueryProcessingActor-0 | INFO | query_actor.py:260 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Recreated retriever with search_type=similarity
+2026-05-07 13:54:51 | sentence_transformers.base.model | INFO | model.py:962 | No modules.json found for cross-encoder/ms-marco-MiniLM-L-4-v2, initializing a new CrossEncoder model.
+2026-05-07 13:54:53 | QueryProcessingActor-0 | INFO | query_actor.py:277 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Recreated RAG spec with retrieval mode
+2026-05-07 13:55:02 | QueryProcessingActor-0 | INFO | query_actor.py:169 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Reusing existing inference engine (config hash: 6350d6d9)
+2026-05-07 13:55:02 | sentence_transformers.base.model | INFO | model.py:973 | Loading SentenceTransformer model from BAAI/bge-small-en-v1.5.
+2026-05-07 13:55:04 | QueryProcessingActor-0 | INFO | query_actor.py:198 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Recreated embedding function: HuggingFaceEmbeddings
+2026-05-07 13:55:04 | QueryProcessingActor-0 | INFO | query_actor.py:260 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Recreated retriever with search_type=similarity
+2026-05-07 13:55:04 | sentence_transformers.base.model | INFO | model.py:962 | No modules.json found for BAAI/bge-reranker-base, initializing a new CrossEncoder model.
+2026-05-07 13:55:06 | QueryProcessingActor-0 | INFO | query_actor.py:277 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Recreated RAG spec with retrieval mode
+2026-05-07 13:55:17 | QueryProcessingActor-0 | INFO | query_actor.py:169 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Reusing existing inference engine (config hash: 6350d6d9)
+2026-05-07 13:55:17 | sentence_transformers.base.model | INFO | model.py:973 | Loading SentenceTransformer model from BAAI/bge-small-en-v1.5.
+2026-05-07 13:55:18 | QueryProcessingActor-0 | INFO | query_actor.py:198 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Recreated embedding function: HuggingFaceEmbeddings
+2026-05-07 13:55:18 | QueryProcessingActor-0 | INFO | query_actor.py:260 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Recreated retriever with search_type=similarity
+2026-05-07 13:55:18 | QueryProcessingActor-0 | INFO | query_actor.py:277 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Recreated RAG spec with retrieval mode
+2026-05-07 13:55:28 | QueryProcessingActor-0 | INFO | query_actor.py:169 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Reusing existing inference engine (config hash: 6350d6d9)
+2026-05-07 13:55:28 | sentence_transformers.base.model | INFO | model.py:973 | Loading SentenceTransformer model from BAAI/bge-small-en-v1.5.
+2026-05-07 13:55:30 | QueryProcessingActor-0 | INFO | query_actor.py:198 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Recreated embedding function: HuggingFaceEmbeddings
+2026-05-07 13:55:30 | QueryProcessingActor-0 | INFO | query_actor.py:260 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Recreated retriever with search_type=mmr
+2026-05-07 13:55:31 | sentence_transformers.base.model | INFO | model.py:962 | No modules.json found for cross-encoder/ms-marco-MiniLM-L-4-v2, initializing a new CrossEncoder model.
+2026-05-07 13:55:33 | QueryProcessingActor-0 | INFO | query_actor.py:277 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Recreated RAG spec with retrieval mode
+2026-05-07 13:55:43 | QueryProcessingActor-0 | INFO | query_actor.py:169 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Reusing existing inference engine (config hash: 6350d6d9)
+2026-05-07 13:55:43 | sentence_transformers.base.model | INFO | model.py:973 | Loading SentenceTransformer model from BAAI/bge-small-en-v1.5.
+2026-05-07 13:55:45 | QueryProcessingActor-0 | INFO | query_actor.py:198 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Recreated embedding function: HuggingFaceEmbeddings
+2026-05-07 13:55:45 | QueryProcessingActor-0 | INFO | query_actor.py:260 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Recreated retriever with search_type=mmr
+2026-05-07 13:55:45 | sentence_transformers.base.model | INFO | model.py:962 | No modules.json found for BAAI/bge-reranker-base, initializing a new CrossEncoder model.
+2026-05-07 13:55:47 | QueryProcessingActor-0 | INFO | query_actor.py:277 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Recreated RAG spec with retrieval mode
+2026-05-07 13:55:59 | QueryProcessingActor-0 | INFO | query_actor.py:169 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Reusing existing inference engine (config hash: 6350d6d9)
+2026-05-07 13:55:59 | sentence_transformers.base.model | INFO | model.py:973 | Loading SentenceTransformer model from BAAI/bge-small-en-v1.5.
+2026-05-07 13:56:00 | QueryProcessingActor-0 | INFO | query_actor.py:198 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Recreated embedding function: HuggingFaceEmbeddings
+2026-05-07 13:56:00 | QueryProcessingActor-0 | INFO | query_actor.py:260 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Recreated retriever with search_type=mmr
+2026-05-07 13:56:00 | QueryProcessingActor-0 | INFO | query_actor.py:277 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Recreated RAG spec with retrieval mode
+2026-05-07 13:56:08 | QueryProcessingActor-0 | INFO | query_actor.py:169 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Reusing existing inference engine (config hash: 6350d6d9)
+2026-05-07 13:56:08 | sentence_transformers.base.model | INFO | model.py:973 | Loading SentenceTransformer model from BAAI/bge-small-en-v1.5.
+2026-05-07 13:56:10 | QueryProcessingActor-0 | INFO | query_actor.py:198 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Recreated embedding function: HuggingFaceEmbeddings
+2026-05-07 13:56:10 | QueryProcessingActor-0 | INFO | query_actor.py:260 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Recreated retriever with search_type=similarity_score_threshold
+2026-05-07 13:56:10 | sentence_transformers.base.model | INFO | model.py:962 | No modules.json found for cross-encoder/ms-marco-MiniLM-L-4-v2, initializing a new CrossEncoder model.
+2026-05-07 13:56:13 | QueryProcessingActor-0 | INFO | query_actor.py:277 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Recreated RAG spec with retrieval mode
+2026-05-07 13:56:21 | QueryProcessingActor-0 | INFO | query_actor.py:169 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Reusing existing inference engine (config hash: 6350d6d9)
+2026-05-07 13:56:21 | sentence_transformers.base.model | INFO | model.py:973 | Loading SentenceTransformer model from BAAI/bge-small-en-v1.5.
+2026-05-07 13:56:23 | QueryProcessingActor-0 | INFO | query_actor.py:198 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Recreated embedding function: HuggingFaceEmbeddings
+2026-05-07 13:56:23 | QueryProcessingActor-0 | INFO | query_actor.py:260 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Recreated retriever with search_type=similarity_score_threshold
+2026-05-07 13:56:23 | sentence_transformers.base.model | INFO | model.py:962 | No modules.json found for BAAI/bge-reranker-base, initializing a new CrossEncoder model.
+2026-05-07 13:56:25 | QueryProcessingActor-0 | INFO | query_actor.py:277 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Recreated RAG spec with retrieval mode
+2026-05-07 13:56:36 | QueryProcessingActor-0 | INFO | query_actor.py:169 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Reusing existing inference engine (config hash: 6350d6d9)
+2026-05-07 13:56:37 | sentence_transformers.base.model | INFO | model.py:973 | Loading SentenceTransformer model from BAAI/bge-small-en-v1.5.
+2026-05-07 13:56:38 | QueryProcessingActor-0 | INFO | query_actor.py:198 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Recreated embedding function: HuggingFaceEmbeddings
+2026-05-07 13:56:38 | QueryProcessingActor-0 | INFO | query_actor.py:260 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Recreated retriever with search_type=similarity_score_threshold
+2026-05-07 13:56:38 | QueryProcessingActor-0 | INFO | query_actor.py:277 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Recreated RAG spec with retrieval mode
+2026-05-07 13:56:46 | QueryProcessingActor-0 | INFO | query_actor.py:169 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Reusing existing inference engine (config hash: 6350d6d9)
+2026-05-07 13:56:46 | sentence_transformers.base.model | INFO | model.py:973 | Loading SentenceTransformer model from BAAI/bge-small-en-v1.5.
+2026-05-07 13:56:48 | QueryProcessingActor-0 | INFO | query_actor.py:198 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Recreated embedding function: HuggingFaceEmbeddings
+2026-05-07 13:56:48 | QueryProcessingActor-0 | INFO | query_actor.py:260 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Recreated retriever with search_type=similarity
+2026-05-07 13:56:48 | sentence_transformers.base.model | INFO | model.py:962 | No modules.json found for cross-encoder/ms-marco-MiniLM-L-4-v2, initializing a new CrossEncoder model.
+2026-05-07 13:56:50 | QueryProcessingActor-0 | INFO | query_actor.py:277 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Recreated RAG spec with retrieval mode
+2026-05-07 13:57:05 | QueryProcessingActor-0 | INFO | query_actor.py:169 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Reusing existing inference engine (config hash: 6350d6d9)
+2026-05-07 13:57:05 | sentence_transformers.base.model | INFO | model.py:973 | Loading SentenceTransformer model from BAAI/bge-small-en-v1.5.
+2026-05-07 13:57:07 | QueryProcessingActor-0 | INFO | query_actor.py:198 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Recreated embedding function: HuggingFaceEmbeddings
+2026-05-07 13:57:07 | QueryProcessingActor-0 | INFO | query_actor.py:260 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Recreated retriever with search_type=similarity
+2026-05-07 13:57:07 | sentence_transformers.base.model | INFO | model.py:962 | No modules.json found for BAAI/bge-reranker-base, initializing a new CrossEncoder model.
+2026-05-07 13:57:09 | QueryProcessingActor-0 | INFO | query_actor.py:277 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Recreated RAG spec with retrieval mode
+2026-05-07 13:57:24 | QueryProcessingActor-0 | INFO | query_actor.py:169 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Reusing existing inference engine (config hash: 6350d6d9)
+2026-05-07 13:57:24 | sentence_transformers.base.model | INFO | model.py:973 | Loading SentenceTransformer model from BAAI/bge-small-en-v1.5.
+2026-05-07 13:57:26 | QueryProcessingActor-0 | INFO | query_actor.py:198 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Recreated embedding function: HuggingFaceEmbeddings
+2026-05-07 13:57:26 | QueryProcessingActor-0 | INFO | query_actor.py:260 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Recreated retriever with search_type=similarity
+2026-05-07 13:57:26 | QueryProcessingActor-0 | INFO | query_actor.py:277 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Recreated RAG spec with retrieval mode
+2026-05-07 13:57:34 | QueryProcessingActor-0 | INFO | query_actor.py:169 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Reusing existing inference engine (config hash: 6350d6d9)
+2026-05-07 13:57:34 | sentence_transformers.base.model | INFO | model.py:973 | Loading SentenceTransformer model from BAAI/bge-small-en-v1.5.
+2026-05-07 13:57:36 | QueryProcessingActor-0 | INFO | query_actor.py:198 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Recreated embedding function: HuggingFaceEmbeddings
+2026-05-07 13:57:36 | QueryProcessingActor-0 | INFO | query_actor.py:260 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Recreated retriever with search_type=mmr
+2026-05-07 13:57:36 | sentence_transformers.base.model | INFO | model.py:962 | No modules.json found for cross-encoder/ms-marco-MiniLM-L-4-v2, initializing a new CrossEncoder model.
+2026-05-07 13:57:39 | QueryProcessingActor-0 | INFO | query_actor.py:277 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Recreated RAG spec with retrieval mode
+2026-05-07 13:57:49 | QueryProcessingActor-0 | INFO | query_actor.py:169 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Reusing existing inference engine (config hash: 6350d6d9)
+2026-05-07 13:57:49 | sentence_transformers.base.model | INFO | model.py:973 | Loading SentenceTransformer model from BAAI/bge-small-en-v1.5.
+2026-05-07 13:57:51 | QueryProcessingActor-0 | INFO | query_actor.py:198 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Recreated embedding function: HuggingFaceEmbeddings
+2026-05-07 13:57:51 | QueryProcessingActor-0 | INFO | query_actor.py:260 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Recreated retriever with search_type=mmr
+2026-05-07 13:57:51 | sentence_transformers.base.model | INFO | model.py:962 | No modules.json found for BAAI/bge-reranker-base, initializing a new CrossEncoder model.
+2026-05-07 13:57:53 | QueryProcessingActor-0 | INFO | query_actor.py:277 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Recreated RAG spec with retrieval mode
+2026-05-07 13:58:06 | QueryProcessingActor-0 | INFO | query_actor.py:169 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Reusing existing inference engine (config hash: 6350d6d9)
+2026-05-07 13:58:06 | sentence_transformers.base.model | INFO | model.py:973 | Loading SentenceTransformer model from BAAI/bge-small-en-v1.5.
+2026-05-07 13:58:08 | QueryProcessingActor-0 | INFO | query_actor.py:198 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Recreated embedding function: HuggingFaceEmbeddings
+2026-05-07 13:58:08 | QueryProcessingActor-0 | INFO | query_actor.py:260 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Recreated retriever with search_type=mmr
+2026-05-07 13:58:08 | QueryProcessingActor-0 | INFO | query_actor.py:277 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Recreated RAG spec with retrieval mode
+2026-05-07 13:58:16 | QueryProcessingActor-0 | INFO | query_actor.py:169 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Reusing existing inference engine (config hash: 6350d6d9)
+2026-05-07 13:58:17 | sentence_transformers.base.model | INFO | model.py:973 | Loading SentenceTransformer model from BAAI/bge-small-en-v1.5.
+2026-05-07 13:58:18 | QueryProcessingActor-0 | INFO | query_actor.py:198 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Recreated embedding function: HuggingFaceEmbeddings
+2026-05-07 13:58:18 | QueryProcessingActor-0 | INFO | query_actor.py:260 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Recreated retriever with search_type=similarity_score_threshold
+2026-05-07 13:58:19 | sentence_transformers.base.model | INFO | model.py:962 | No modules.json found for cross-encoder/ms-marco-MiniLM-L-4-v2, initializing a new CrossEncoder model.
+2026-05-07 13:58:21 | QueryProcessingActor-0 | INFO | query_actor.py:277 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Recreated RAG spec with retrieval mode
+2026-05-07 13:58:31 | QueryProcessingActor-0 | INFO | query_actor.py:169 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Reusing existing inference engine (config hash: 6350d6d9)
+2026-05-07 13:58:31 | sentence_transformers.base.model | INFO | model.py:973 | Loading SentenceTransformer model from BAAI/bge-small-en-v1.5.
+2026-05-07 13:58:33 | QueryProcessingActor-0 | INFO | query_actor.py:198 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Recreated embedding function: HuggingFaceEmbeddings
+2026-05-07 13:58:33 | QueryProcessingActor-0 | INFO | query_actor.py:260 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Recreated retriever with search_type=similarity_score_threshold
+2026-05-07 13:58:33 | sentence_transformers.base.model | INFO | model.py:962 | No modules.json found for BAAI/bge-reranker-base, initializing a new CrossEncoder model.
+2026-05-07 13:58:35 | QueryProcessingActor-0 | INFO | query_actor.py:277 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Recreated RAG spec with retrieval mode
+2026-05-07 13:58:49 | QueryProcessingActor-0 | INFO | query_actor.py:169 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Reusing existing inference engine (config hash: 6350d6d9)
+2026-05-07 13:58:49 | sentence_transformers.base.model | INFO | model.py:973 | Loading SentenceTransformer model from BAAI/bge-small-en-v1.5.
+2026-05-07 13:58:51 | QueryProcessingActor-0 | INFO | query_actor.py:198 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Recreated embedding function: HuggingFaceEmbeddings
+2026-05-07 13:58:51 | QueryProcessingActor-0 | INFO | query_actor.py:260 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Recreated retriever with search_type=similarity_score_threshold
+2026-05-07 13:58:51 | QueryProcessingActor-0 | INFO | query_actor.py:277 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Recreated RAG spec with retrieval mode
+2026-05-07 13:59:00 | QueryProcessingActor-0 | INFO | query_actor.py:169 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Reusing existing inference engine (config hash: 6350d6d9)
+2026-05-07 13:59:00 | sentence_transformers.base.model | INFO | model.py:973 | Loading SentenceTransformer model from BAAI/bge-small-en-v1.5.
+2026-05-07 13:59:02 | QueryProcessingActor-0 | INFO | query_actor.py:198 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Recreated embedding function: HuggingFaceEmbeddings
+2026-05-07 13:59:02 | QueryProcessingActor-0 | INFO | query_actor.py:260 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Recreated retriever with search_type=similarity
+2026-05-07 13:59:02 | sentence_transformers.base.model | INFO | model.py:962 | No modules.json found for cross-encoder/ms-marco-MiniLM-L-4-v2, initializing a new CrossEncoder model.
+2026-05-07 13:59:04 | QueryProcessingActor-0 | INFO | query_actor.py:277 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Recreated RAG spec with retrieval mode
+2026-05-07 13:59:16 | QueryProcessingActor-0 | INFO | query_actor.py:169 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Reusing existing inference engine (config hash: 6350d6d9)
+2026-05-07 13:59:16 | sentence_transformers.base.model | INFO | model.py:973 | Loading SentenceTransformer model from BAAI/bge-small-en-v1.5.
+2026-05-07 13:59:18 | QueryProcessingActor-0 | INFO | query_actor.py:198 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Recreated embedding function: HuggingFaceEmbeddings
+2026-05-07 13:59:18 | QueryProcessingActor-0 | INFO | query_actor.py:260 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Recreated retriever with search_type=similarity
+2026-05-07 13:59:18 | sentence_transformers.base.model | INFO | model.py:962 | No modules.json found for BAAI/bge-reranker-base, initializing a new CrossEncoder model.
+2026-05-07 13:59:20 | QueryProcessingActor-0 | INFO | query_actor.py:277 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Recreated RAG spec with retrieval mode
+2026-05-07 13:59:36 | QueryProcessingActor-0 | INFO | query_actor.py:169 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Reusing existing inference engine (config hash: 6350d6d9)
+2026-05-07 13:59:36 | sentence_transformers.base.model | INFO | model.py:973 | Loading SentenceTransformer model from BAAI/bge-small-en-v1.5.
+2026-05-07 13:59:38 | QueryProcessingActor-0 | INFO | query_actor.py:198 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Recreated embedding function: HuggingFaceEmbeddings
+2026-05-07 13:59:38 | QueryProcessingActor-0 | INFO | query_actor.py:260 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Recreated retriever with search_type=similarity
+2026-05-07 13:59:38 | QueryProcessingActor-0 | INFO | query_actor.py:277 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Recreated RAG spec with retrieval mode
+2026-05-07 13:59:47 | QueryProcessingActor-0 | INFO | query_actor.py:169 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Reusing existing inference engine (config hash: 6350d6d9)
+2026-05-07 13:59:47 | sentence_transformers.base.model | INFO | model.py:973 | Loading SentenceTransformer model from BAAI/bge-small-en-v1.5.
+2026-05-07 13:59:49 | QueryProcessingActor-0 | INFO | query_actor.py:198 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Recreated embedding function: HuggingFaceEmbeddings
+2026-05-07 13:59:49 | QueryProcessingActor-0 | INFO | query_actor.py:260 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Recreated retriever with search_type=mmr
+2026-05-07 13:59:49 | sentence_transformers.base.model | INFO | model.py:962 | No modules.json found for cross-encoder/ms-marco-MiniLM-L-4-v2, initializing a new CrossEncoder model.
+2026-05-07 13:59:52 | QueryProcessingActor-0 | INFO | query_actor.py:277 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Recreated RAG spec with retrieval mode
+2026-05-07 14:00:02 | QueryProcessingActor-0 | INFO | query_actor.py:169 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Reusing existing inference engine (config hash: 6350d6d9)
+2026-05-07 14:00:02 | sentence_transformers.base.model | INFO | model.py:973 | Loading SentenceTransformer model from BAAI/bge-small-en-v1.5.
+2026-05-07 14:00:04 | QueryProcessingActor-0 | INFO | query_actor.py:198 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Recreated embedding function: HuggingFaceEmbeddings
+2026-05-07 14:00:04 | QueryProcessingActor-0 | INFO | query_actor.py:260 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Recreated retriever with search_type=mmr
+2026-05-07 14:00:04 | sentence_transformers.base.model | INFO | model.py:962 | No modules.json found for BAAI/bge-reranker-base, initializing a new CrossEncoder model.
+2026-05-07 14:00:07 | QueryProcessingActor-0 | INFO | query_actor.py:277 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Recreated RAG spec with retrieval mode
+2026-05-07 14:00:23 | QueryProcessingActor-0 | INFO | query_actor.py:169 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Reusing existing inference engine (config hash: 6350d6d9)
+2026-05-07 14:00:23 | sentence_transformers.base.model | INFO | model.py:973 | Loading SentenceTransformer model from BAAI/bge-small-en-v1.5.
+2026-05-07 14:00:25 | QueryProcessingActor-0 | INFO | query_actor.py:198 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Recreated embedding function: HuggingFaceEmbeddings
+2026-05-07 14:00:25 | QueryProcessingActor-0 | INFO | query_actor.py:260 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Recreated retriever with search_type=mmr
+2026-05-07 14:00:25 | QueryProcessingActor-0 | INFO | query_actor.py:277 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Recreated RAG spec with retrieval mode
+2026-05-07 14:00:36 | QueryProcessingActor-0 | INFO | query_actor.py:169 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Reusing existing inference engine (config hash: 6350d6d9)
+2026-05-07 14:00:36 | sentence_transformers.base.model | INFO | model.py:973 | Loading SentenceTransformer model from BAAI/bge-small-en-v1.5.
+2026-05-07 14:00:38 | QueryProcessingActor-0 | INFO | query_actor.py:198 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Recreated embedding function: HuggingFaceEmbeddings
+2026-05-07 14:00:38 | QueryProcessingActor-0 | INFO | query_actor.py:260 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Recreated retriever with search_type=similarity_score_threshold
+2026-05-07 14:00:39 | sentence_transformers.base.model | INFO | model.py:962 | No modules.json found for cross-encoder/ms-marco-MiniLM-L-4-v2, initializing a new CrossEncoder model.
+2026-05-07 14:00:41 | QueryProcessingActor-0 | INFO | query_actor.py:277 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Recreated RAG spec with retrieval mode
+2026-05-07 14:00:52 | QueryProcessingActor-0 | INFO | query_actor.py:169 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Reusing existing inference engine (config hash: 6350d6d9)
+2026-05-07 14:00:52 | sentence_transformers.base.model | INFO | model.py:973 | Loading SentenceTransformer model from BAAI/bge-small-en-v1.5.
+2026-05-07 14:00:54 | QueryProcessingActor-0 | INFO | query_actor.py:198 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Recreated embedding function: HuggingFaceEmbeddings
+2026-05-07 14:00:54 | QueryProcessingActor-0 | INFO | query_actor.py:260 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Recreated retriever with search_type=similarity_score_threshold
+2026-05-07 14:00:54 | sentence_transformers.base.model | INFO | model.py:962 | No modules.json found for BAAI/bge-reranker-base, initializing a new CrossEncoder model.
+2026-05-07 14:00:57 | QueryProcessingActor-0 | INFO | query_actor.py:277 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Recreated RAG spec with retrieval mode
+2026-05-07 14:01:13 | QueryProcessingActor-0 | INFO | query_actor.py:169 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Reusing existing inference engine (config hash: 6350d6d9)
+2026-05-07 14:01:13 | sentence_transformers.base.model | INFO | model.py:973 | Loading SentenceTransformer model from BAAI/bge-small-en-v1.5.
+2026-05-07 14:01:14 | QueryProcessingActor-0 | INFO | query_actor.py:198 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Recreated embedding function: HuggingFaceEmbeddings
+2026-05-07 14:01:14 | QueryProcessingActor-0 | INFO | query_actor.py:260 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Recreated retriever with search_type=similarity_score_threshold
+2026-05-07 14:01:14 | QueryProcessingActor-0 | INFO | query_actor.py:277 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Recreated RAG spec with retrieval mode
+2026-05-07 14:01:26 | QueryProcessingActor-0 | INFO | query_actor.py:169 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Reusing existing inference engine (config hash: 6350d6d9)
+2026-05-07 14:01:26 | sentence_transformers.base.model | INFO | model.py:973 | Loading SentenceTransformer model from BAAI/bge-small-en-v1.5.
+2026-05-07 14:01:28 | QueryProcessingActor-0 | INFO | query_actor.py:198 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Recreated embedding function: HuggingFaceEmbeddings
+2026-05-07 14:01:28 | QueryProcessingActor-0 | INFO | query_actor.py:260 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Recreated retriever with search_type=similarity
+2026-05-07 14:01:28 | sentence_transformers.base.model | INFO | model.py:962 | No modules.json found for cross-encoder/ms-marco-MiniLM-L-4-v2, initializing a new CrossEncoder model.
+2026-05-07 14:01:30 | QueryProcessingActor-0 | INFO | query_actor.py:277 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Recreated RAG spec with retrieval mode
+2026-05-07 14:01:39 | QueryProcessingActor-0 | INFO | query_actor.py:169 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Reusing existing inference engine (config hash: 6350d6d9)
+2026-05-07 14:01:40 | sentence_transformers.base.model | INFO | model.py:973 | Loading SentenceTransformer model from BAAI/bge-small-en-v1.5.
+2026-05-07 14:01:41 | QueryProcessingActor-0 | INFO | query_actor.py:198 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Recreated embedding function: HuggingFaceEmbeddings
+2026-05-07 14:01:41 | QueryProcessingActor-0 | INFO | query_actor.py:260 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Recreated retriever with search_type=similarity
+2026-05-07 14:01:42 | sentence_transformers.base.model | INFO | model.py:962 | No modules.json found for BAAI/bge-reranker-base, initializing a new CrossEncoder model.
+2026-05-07 14:01:44 | QueryProcessingActor-0 | INFO | query_actor.py:277 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Recreated RAG spec with retrieval mode
+2026-05-07 14:01:54 | QueryProcessingActor-0 | INFO | query_actor.py:169 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Reusing existing inference engine (config hash: 6350d6d9)
+2026-05-07 14:01:54 | sentence_transformers.base.model | INFO | model.py:973 | Loading SentenceTransformer model from BAAI/bge-small-en-v1.5.
+2026-05-07 14:01:56 | QueryProcessingActor-0 | INFO | query_actor.py:198 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Recreated embedding function: HuggingFaceEmbeddings
+2026-05-07 14:01:56 | QueryProcessingActor-0 | INFO | query_actor.py:260 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Recreated retriever with search_type=similarity
+2026-05-07 14:01:56 | QueryProcessingActor-0 | INFO | query_actor.py:277 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Recreated RAG spec with retrieval mode
+2026-05-07 14:02:04 | QueryProcessingActor-0 | INFO | query_actor.py:169 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Reusing existing inference engine (config hash: 6350d6d9)
+2026-05-07 14:02:05 | sentence_transformers.base.model | INFO | model.py:973 | Loading SentenceTransformer model from BAAI/bge-small-en-v1.5.
+2026-05-07 14:02:06 | QueryProcessingActor-0 | INFO | query_actor.py:198 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Recreated embedding function: HuggingFaceEmbeddings
+2026-05-07 14:02:06 | QueryProcessingActor-0 | INFO | query_actor.py:260 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Recreated retriever with search_type=mmr
+2026-05-07 14:02:06 | sentence_transformers.base.model | INFO | model.py:962 | No modules.json found for cross-encoder/ms-marco-MiniLM-L-4-v2, initializing a new CrossEncoder model.
+2026-05-07 14:02:09 | QueryProcessingActor-0 | INFO | query_actor.py:277 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Recreated RAG spec with retrieval mode
+2026-05-07 14:02:19 | QueryProcessingActor-0 | INFO | query_actor.py:169 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Reusing existing inference engine (config hash: 6350d6d9)
+2026-05-07 14:02:19 | sentence_transformers.base.model | INFO | model.py:973 | Loading SentenceTransformer model from BAAI/bge-small-en-v1.5.
+2026-05-07 14:02:21 | QueryProcessingActor-0 | INFO | query_actor.py:198 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Recreated embedding function: HuggingFaceEmbeddings
+2026-05-07 14:02:21 | QueryProcessingActor-0 | INFO | query_actor.py:260 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Recreated retriever with search_type=mmr
+2026-05-07 14:02:21 | sentence_transformers.base.model | INFO | model.py:962 | No modules.json found for BAAI/bge-reranker-base, initializing a new CrossEncoder model.
+2026-05-07 14:02:23 | QueryProcessingActor-0 | INFO | query_actor.py:277 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Recreated RAG spec with retrieval mode
+2026-05-07 14:02:34 | QueryProcessingActor-0 | INFO | query_actor.py:169 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Reusing existing inference engine (config hash: 6350d6d9)
+2026-05-07 14:02:34 | sentence_transformers.base.model | INFO | model.py:973 | Loading SentenceTransformer model from BAAI/bge-small-en-v1.5.
+2026-05-07 14:02:36 | QueryProcessingActor-0 | INFO | query_actor.py:198 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Recreated embedding function: HuggingFaceEmbeddings
+2026-05-07 14:02:36 | QueryProcessingActor-0 | INFO | query_actor.py:260 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Recreated retriever with search_type=mmr
+2026-05-07 14:02:36 | QueryProcessingActor-0 | INFO | query_actor.py:277 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Recreated RAG spec with retrieval mode
+2026-05-07 14:02:45 | QueryProcessingActor-0 | INFO | query_actor.py:169 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Reusing existing inference engine (config hash: 6350d6d9)
+2026-05-07 14:02:45 | sentence_transformers.base.model | INFO | model.py:973 | Loading SentenceTransformer model from BAAI/bge-small-en-v1.5.
+2026-05-07 14:02:46 | QueryProcessingActor-0 | INFO | query_actor.py:198 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Recreated embedding function: HuggingFaceEmbeddings
+2026-05-07 14:02:46 | QueryProcessingActor-0 | INFO | query_actor.py:260 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Recreated retriever with search_type=similarity_score_threshold
+2026-05-07 14:02:47 | sentence_transformers.base.model | INFO | model.py:962 | No modules.json found for cross-encoder/ms-marco-MiniLM-L-4-v2, initializing a new CrossEncoder model.
+2026-05-07 14:02:49 | QueryProcessingActor-0 | INFO | query_actor.py:277 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Recreated RAG spec with retrieval mode
+2026-05-07 14:02:57 | QueryProcessingActor-0 | INFO | query_actor.py:169 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Reusing existing inference engine (config hash: 6350d6d9)
+2026-05-07 14:02:57 | sentence_transformers.base.model | INFO | model.py:973 | Loading SentenceTransformer model from BAAI/bge-small-en-v1.5.
+2026-05-07 14:02:59 | QueryProcessingActor-0 | INFO | query_actor.py:198 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Recreated embedding function: HuggingFaceEmbeddings
+2026-05-07 14:02:59 | QueryProcessingActor-0 | INFO | query_actor.py:260 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Recreated retriever with search_type=similarity_score_threshold
+2026-05-07 14:02:59 | sentence_transformers.base.model | INFO | model.py:962 | No modules.json found for BAAI/bge-reranker-base, initializing a new CrossEncoder model.
+2026-05-07 14:03:01 | QueryProcessingActor-0 | INFO | query_actor.py:277 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Recreated RAG spec with retrieval mode
+2026-05-07 14:03:11 | QueryProcessingActor-0 | INFO | query_actor.py:169 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Reusing existing inference engine (config hash: 6350d6d9)
+2026-05-07 14:03:11 | sentence_transformers.base.model | INFO | model.py:973 | Loading SentenceTransformer model from BAAI/bge-small-en-v1.5.
+2026-05-07 14:03:13 | QueryProcessingActor-0 | INFO | query_actor.py:198 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Recreated embedding function: HuggingFaceEmbeddings
+2026-05-07 14:03:13 | QueryProcessingActor-0 | INFO | query_actor.py:260 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Recreated retriever with search_type=similarity_score_threshold
+2026-05-07 14:03:13 | QueryProcessingActor-0 | INFO | query_actor.py:277 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Recreated RAG spec with retrieval mode
+2026-05-07 14:03:20 | QueryProcessingActor-0 | INFO | query_actor.py:169 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Reusing existing inference engine (config hash: 6350d6d9)
+2026-05-07 14:03:21 | sentence_transformers.base.model | INFO | model.py:973 | Loading SentenceTransformer model from BAAI/bge-small-en-v1.5.
+2026-05-07 14:03:23 | QueryProcessingActor-0 | INFO | query_actor.py:198 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Recreated embedding function: HuggingFaceEmbeddings
+2026-05-07 14:03:23 | QueryProcessingActor-0 | INFO | query_actor.py:260 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Recreated retriever with search_type=similarity
+2026-05-07 14:03:23 | sentence_transformers.base.model | INFO | model.py:962 | No modules.json found for cross-encoder/ms-marco-MiniLM-L-4-v2, initializing a new CrossEncoder model.
+2026-05-07 14:03:26 | QueryProcessingActor-0 | INFO | query_actor.py:277 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Recreated RAG spec with retrieval mode
+2026-05-07 14:03:36 | QueryProcessingActor-0 | INFO | query_actor.py:169 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Reusing existing inference engine (config hash: 6350d6d9)
+2026-05-07 14:03:36 | sentence_transformers.base.model | INFO | model.py:973 | Loading SentenceTransformer model from BAAI/bge-small-en-v1.5.
+2026-05-07 14:03:38 | QueryProcessingActor-0 | INFO | query_actor.py:198 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Recreated embedding function: HuggingFaceEmbeddings
+2026-05-07 14:03:38 | QueryProcessingActor-0 | INFO | query_actor.py:260 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Recreated retriever with search_type=similarity
+2026-05-07 14:03:38 | sentence_transformers.base.model | INFO | model.py:962 | No modules.json found for BAAI/bge-reranker-base, initializing a new CrossEncoder model.
+2026-05-07 14:03:44 | QueryProcessingActor-0 | INFO | query_actor.py:277 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Recreated RAG spec with retrieval mode
+2026-05-07 14:03:57 | QueryProcessingActor-0 | INFO | query_actor.py:169 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Reusing existing inference engine (config hash: 6350d6d9)
+2026-05-07 14:03:57 | sentence_transformers.base.model | INFO | model.py:973 | Loading SentenceTransformer model from BAAI/bge-small-en-v1.5.
+2026-05-07 14:03:59 | QueryProcessingActor-0 | INFO | query_actor.py:198 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Recreated embedding function: HuggingFaceEmbeddings
+2026-05-07 14:03:59 | QueryProcessingActor-0 | INFO | query_actor.py:260 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Recreated retriever with search_type=similarity
+2026-05-07 14:03:59 | QueryProcessingActor-0 | INFO | query_actor.py:277 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Recreated RAG spec with retrieval mode
+2026-05-07 14:04:08 | QueryProcessingActor-0 | INFO | query_actor.py:169 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Reusing existing inference engine (config hash: 6350d6d9)
+2026-05-07 14:04:08 | sentence_transformers.base.model | INFO | model.py:973 | Loading SentenceTransformer model from BAAI/bge-small-en-v1.5.
+2026-05-07 14:04:10 | QueryProcessingActor-0 | INFO | query_actor.py:198 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Recreated embedding function: HuggingFaceEmbeddings
+2026-05-07 14:04:10 | QueryProcessingActor-0 | INFO | query_actor.py:260 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Recreated retriever with search_type=mmr
+2026-05-07 14:04:10 | sentence_transformers.base.model | INFO | model.py:962 | No modules.json found for cross-encoder/ms-marco-MiniLM-L-4-v2, initializing a new CrossEncoder model.
+2026-05-07 14:04:12 | QueryProcessingActor-0 | INFO | query_actor.py:277 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Recreated RAG spec with retrieval mode
+2026-05-07 14:04:25 | QueryProcessingActor-0 | INFO | query_actor.py:169 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Reusing existing inference engine (config hash: 6350d6d9)
+2026-05-07 14:04:25 | sentence_transformers.base.model | INFO | model.py:973 | Loading SentenceTransformer model from BAAI/bge-small-en-v1.5.
+2026-05-07 14:04:27 | QueryProcessingActor-0 | INFO | query_actor.py:198 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Recreated embedding function: HuggingFaceEmbeddings
+2026-05-07 14:04:27 | QueryProcessingActor-0 | INFO | query_actor.py:260 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Recreated retriever with search_type=mmr
+2026-05-07 14:04:27 | sentence_transformers.base.model | INFO | model.py:962 | No modules.json found for BAAI/bge-reranker-base, initializing a new CrossEncoder model.
+2026-05-07 14:04:30 | QueryProcessingActor-0 | INFO | query_actor.py:277 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Recreated RAG spec with retrieval mode
+2026-05-07 14:04:45 | QueryProcessingActor-0 | INFO | query_actor.py:169 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Reusing existing inference engine (config hash: 6350d6d9)
+2026-05-07 14:04:45 | sentence_transformers.base.model | INFO | model.py:973 | Loading SentenceTransformer model from BAAI/bge-small-en-v1.5.
+2026-05-07 14:04:47 | QueryProcessingActor-0 | INFO | query_actor.py:198 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Recreated embedding function: HuggingFaceEmbeddings
+2026-05-07 14:04:47 | QueryProcessingActor-0 | INFO | query_actor.py:260 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Recreated retriever with search_type=mmr
+2026-05-07 14:04:47 | QueryProcessingActor-0 | INFO | query_actor.py:277 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Recreated RAG spec with retrieval mode
+2026-05-07 14:04:59 | QueryProcessingActor-0 | INFO | query_actor.py:169 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Reusing existing inference engine (config hash: 6350d6d9)
+2026-05-07 14:04:59 | sentence_transformers.base.model | INFO | model.py:973 | Loading SentenceTransformer model from BAAI/bge-small-en-v1.5.
+2026-05-07 14:05:01 | QueryProcessingActor-0 | INFO | query_actor.py:198 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Recreated embedding function: HuggingFaceEmbeddings
+2026-05-07 14:05:01 | QueryProcessingActor-0 | INFO | query_actor.py:260 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Recreated retriever with search_type=similarity_score_threshold
+2026-05-07 14:05:01 | sentence_transformers.base.model | INFO | model.py:962 | No modules.json found for cross-encoder/ms-marco-MiniLM-L-4-v2, initializing a new CrossEncoder model.
+2026-05-07 14:05:04 | QueryProcessingActor-0 | INFO | query_actor.py:277 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Recreated RAG spec with retrieval mode
+2026-05-07 14:05:12 | QueryProcessingActor-0 | INFO | query_actor.py:169 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Reusing existing inference engine (config hash: 6350d6d9)
+2026-05-07 14:05:13 | sentence_transformers.base.model | INFO | model.py:973 | Loading SentenceTransformer model from BAAI/bge-small-en-v1.5.
+2026-05-07 14:05:14 | QueryProcessingActor-0 | INFO | query_actor.py:198 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Recreated embedding function: HuggingFaceEmbeddings
+2026-05-07 14:05:14 | QueryProcessingActor-0 | INFO | query_actor.py:260 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Recreated retriever with search_type=similarity_score_threshold
+2026-05-07 14:05:15 | sentence_transformers.base.model | INFO | model.py:962 | No modules.json found for BAAI/bge-reranker-base, initializing a new CrossEncoder model.
+2026-05-07 14:05:17 | QueryProcessingActor-0 | INFO | query_actor.py:277 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Recreated RAG spec with retrieval mode
+2026-05-07 14:05:29 | QueryProcessingActor-0 | INFO | query_actor.py:169 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Reusing existing inference engine (config hash: 6350d6d9)
+2026-05-07 14:05:30 | sentence_transformers.base.model | INFO | model.py:973 | Loading SentenceTransformer model from BAAI/bge-small-en-v1.5.
+2026-05-07 14:05:33 | QueryProcessingActor-0 | INFO | query_actor.py:198 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Recreated embedding function: HuggingFaceEmbeddings
+2026-05-07 14:05:33 | QueryProcessingActor-0 | INFO | query_actor.py:260 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Recreated retriever with search_type=similarity_score_threshold
+2026-05-07 14:05:33 | QueryProcessingActor-0 | INFO | query_actor.py:277 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Recreated RAG spec with retrieval mode
+2026-05-07 14:05:42 | QueryProcessingActor-0 | INFO | query_actor.py:169 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Reusing existing inference engine (config hash: 6350d6d9)
+2026-05-07 14:05:42 | sentence_transformers.base.model | INFO | model.py:973 | Loading SentenceTransformer model from BAAI/bge-small-en-v1.5.
+2026-05-07 14:05:44 | QueryProcessingActor-0 | INFO | query_actor.py:198 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Recreated embedding function: HuggingFaceEmbeddings
+2026-05-07 14:05:44 | QueryProcessingActor-0 | INFO | query_actor.py:260 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Recreated retriever with search_type=similarity
+2026-05-07 14:05:44 | sentence_transformers.base.model | INFO | model.py:962 | No modules.json found for cross-encoder/ms-marco-MiniLM-L-4-v2, initializing a new CrossEncoder model.
+2026-05-07 14:05:46 | QueryProcessingActor-0 | INFO | query_actor.py:277 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Recreated RAG spec with retrieval mode
+2026-05-07 14:05:58 | QueryProcessingActor-0 | INFO | query_actor.py:169 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Reusing existing inference engine (config hash: 6350d6d9)
+2026-05-07 14:05:58 | sentence_transformers.base.model | INFO | model.py:973 | Loading SentenceTransformer model from BAAI/bge-small-en-v1.5.
+2026-05-07 14:06:00 | QueryProcessingActor-0 | INFO | query_actor.py:198 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Recreated embedding function: HuggingFaceEmbeddings
+2026-05-07 14:06:00 | QueryProcessingActor-0 | INFO | query_actor.py:260 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Recreated retriever with search_type=similarity
+2026-05-07 14:06:00 | sentence_transformers.base.model | INFO | model.py:962 | No modules.json found for BAAI/bge-reranker-base, initializing a new CrossEncoder model.
+2026-05-07 14:06:03 | QueryProcessingActor-0 | INFO | query_actor.py:277 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Recreated RAG spec with retrieval mode
+2026-05-07 14:06:22 | QueryProcessingActor-0 | INFO | query_actor.py:169 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Reusing existing inference engine (config hash: 6350d6d9)
+2026-05-07 14:06:22 | sentence_transformers.base.model | INFO | model.py:973 | Loading SentenceTransformer model from BAAI/bge-small-en-v1.5.
+2026-05-07 14:06:23 | QueryProcessingActor-0 | INFO | query_actor.py:198 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Recreated embedding function: HuggingFaceEmbeddings
+2026-05-07 14:06:23 | QueryProcessingActor-0 | INFO | query_actor.py:260 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Recreated retriever with search_type=similarity
+2026-05-07 14:06:23 | QueryProcessingActor-0 | INFO | query_actor.py:277 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Recreated RAG spec with retrieval mode
+2026-05-07 14:06:41 | QueryProcessingActor-0 | INFO | query_actor.py:169 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Reusing existing inference engine (config hash: 6350d6d9)
+2026-05-07 14:06:41 | sentence_transformers.base.model | INFO | model.py:973 | Loading SentenceTransformer model from BAAI/bge-small-en-v1.5.
+2026-05-07 14:06:43 | QueryProcessingActor-0 | INFO | query_actor.py:198 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Recreated embedding function: HuggingFaceEmbeddings
+2026-05-07 14:06:43 | QueryProcessingActor-0 | INFO | query_actor.py:260 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Recreated retriever with search_type=mmr
+2026-05-07 14:06:43 | sentence_transformers.base.model | INFO | model.py:962 | No modules.json found for cross-encoder/ms-marco-MiniLM-L-4-v2, initializing a new CrossEncoder model.
+2026-05-07 14:06:45 | QueryProcessingActor-0 | INFO | query_actor.py:277 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Recreated RAG spec with retrieval mode
+2026-05-07 14:07:02 | QueryProcessingActor-0 | INFO | query_actor.py:169 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Reusing existing inference engine (config hash: 6350d6d9)
+2026-05-07 14:07:03 | sentence_transformers.base.model | INFO | model.py:973 | Loading SentenceTransformer model from BAAI/bge-small-en-v1.5.
+2026-05-07 14:07:04 | QueryProcessingActor-0 | INFO | query_actor.py:198 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Recreated embedding function: HuggingFaceEmbeddings
+2026-05-07 14:07:04 | QueryProcessingActor-0 | INFO | query_actor.py:260 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Recreated retriever with search_type=mmr
+2026-05-07 14:07:05 | sentence_transformers.base.model | INFO | model.py:962 | No modules.json found for BAAI/bge-reranker-base, initializing a new CrossEncoder model.
+2026-05-07 14:07:07 | QueryProcessingActor-0 | INFO | query_actor.py:277 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Recreated RAG spec with retrieval mode
+2026-05-07 14:07:27 | QueryProcessingActor-0 | INFO | query_actor.py:169 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Reusing existing inference engine (config hash: 6350d6d9)
+2026-05-07 14:07:27 | sentence_transformers.base.model | INFO | model.py:973 | Loading SentenceTransformer model from BAAI/bge-small-en-v1.5.
+2026-05-07 14:07:29 | QueryProcessingActor-0 | INFO | query_actor.py:198 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Recreated embedding function: HuggingFaceEmbeddings
+2026-05-07 14:07:29 | QueryProcessingActor-0 | INFO | query_actor.py:260 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Recreated retriever with search_type=mmr
+2026-05-07 14:07:29 | QueryProcessingActor-0 | INFO | query_actor.py:277 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Recreated RAG spec with retrieval mode
+2026-05-07 14:07:41 | QueryProcessingActor-0 | INFO | query_actor.py:169 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Reusing existing inference engine (config hash: 6350d6d9)
+2026-05-07 14:07:41 | sentence_transformers.base.model | INFO | model.py:973 | Loading SentenceTransformer model from BAAI/bge-small-en-v1.5.
+2026-05-07 14:07:43 | QueryProcessingActor-0 | INFO | query_actor.py:198 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Recreated embedding function: HuggingFaceEmbeddings
+2026-05-07 14:07:43 | QueryProcessingActor-0 | INFO | query_actor.py:260 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Recreated retriever with search_type=similarity_score_threshold
+2026-05-07 14:07:43 | sentence_transformers.base.model | INFO | model.py:962 | No modules.json found for cross-encoder/ms-marco-MiniLM-L-4-v2, initializing a new CrossEncoder model.
+2026-05-07 14:07:45 | QueryProcessingActor-0 | INFO | query_actor.py:277 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Recreated RAG spec with retrieval mode
+2026-05-07 14:07:56 | QueryProcessingActor-0 | INFO | query_actor.py:169 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Reusing existing inference engine (config hash: 6350d6d9)
+2026-05-07 14:07:56 | sentence_transformers.base.model | INFO | model.py:973 | Loading SentenceTransformer model from BAAI/bge-small-en-v1.5.
+2026-05-07 14:07:58 | QueryProcessingActor-0 | INFO | query_actor.py:198 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Recreated embedding function: HuggingFaceEmbeddings
+2026-05-07 14:07:58 | QueryProcessingActor-0 | INFO | query_actor.py:260 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Recreated retriever with search_type=similarity_score_threshold
+2026-05-07 14:07:58 | sentence_transformers.base.model | INFO | model.py:962 | No modules.json found for BAAI/bge-reranker-base, initializing a new CrossEncoder model.
+2026-05-07 14:08:00 | QueryProcessingActor-0 | INFO | query_actor.py:277 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Recreated RAG spec with retrieval mode
+2026-05-07 14:08:16 | QueryProcessingActor-0 | INFO | query_actor.py:169 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Reusing existing inference engine (config hash: 6350d6d9)
+2026-05-07 14:08:16 | sentence_transformers.base.model | INFO | model.py:973 | Loading SentenceTransformer model from BAAI/bge-small-en-v1.5.
+2026-05-07 14:08:17 | QueryProcessingActor-0 | INFO | query_actor.py:198 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Recreated embedding function: HuggingFaceEmbeddings
+2026-05-07 14:08:17 | QueryProcessingActor-0 | INFO | query_actor.py:260 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Recreated retriever with search_type=similarity_score_threshold
+2026-05-07 14:08:17 | QueryProcessingActor-0 | INFO | query_actor.py:277 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Recreated RAG spec with retrieval mode
+2026-05-07 14:08:27 | QueryProcessingActor-0 | INFO | query_actor.py:169 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Reusing existing inference engine (config hash: 6350d6d9)
+2026-05-07 14:08:27 | sentence_transformers.base.model | INFO | model.py:973 | Loading SentenceTransformer model from BAAI/bge-small-en-v1.5.
+2026-05-07 14:08:28 | QueryProcessingActor-0 | INFO | query_actor.py:198 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Recreated embedding function: HuggingFaceEmbeddings
+2026-05-07 14:08:28 | QueryProcessingActor-0 | INFO | query_actor.py:260 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Recreated retriever with search_type=similarity
+2026-05-07 14:08:29 | sentence_transformers.base.model | INFO | model.py:962 | No modules.json found for cross-encoder/ms-marco-MiniLM-L-4-v2, initializing a new CrossEncoder model.
+2026-05-07 14:08:31 | QueryProcessingActor-0 | INFO | query_actor.py:277 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Recreated RAG spec with retrieval mode
+2026-05-07 14:08:39 | QueryProcessingActor-0 | INFO | query_actor.py:169 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Reusing existing inference engine (config hash: 6350d6d9)
+2026-05-07 14:08:39 | sentence_transformers.base.model | INFO | model.py:973 | Loading SentenceTransformer model from BAAI/bge-small-en-v1.5.
+2026-05-07 14:08:41 | QueryProcessingActor-0 | INFO | query_actor.py:198 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Recreated embedding function: HuggingFaceEmbeddings
+2026-05-07 14:08:41 | QueryProcessingActor-0 | INFO | query_actor.py:260 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Recreated retriever with search_type=similarity
+2026-05-07 14:08:41 | sentence_transformers.base.model | INFO | model.py:962 | No modules.json found for BAAI/bge-reranker-base, initializing a new CrossEncoder model.
+2026-05-07 14:08:43 | QueryProcessingActor-0 | INFO | query_actor.py:277 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Recreated RAG spec with retrieval mode
+2026-05-07 14:08:53 | QueryProcessingActor-0 | INFO | query_actor.py:169 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Reusing existing inference engine (config hash: 6350d6d9)
+2026-05-07 14:08:54 | sentence_transformers.base.model | INFO | model.py:973 | Loading SentenceTransformer model from BAAI/bge-small-en-v1.5.
+2026-05-07 14:08:55 | QueryProcessingActor-0 | INFO | query_actor.py:198 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Recreated embedding function: HuggingFaceEmbeddings
+2026-05-07 14:08:55 | QueryProcessingActor-0 | INFO | query_actor.py:260 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Recreated retriever with search_type=similarity
+2026-05-07 14:08:55 | QueryProcessingActor-0 | INFO | query_actor.py:277 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Recreated RAG spec with retrieval mode
+2026-05-07 14:09:02 | QueryProcessingActor-0 | INFO | query_actor.py:169 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Reusing existing inference engine (config hash: 6350d6d9)
+2026-05-07 14:09:02 | sentence_transformers.base.model | INFO | model.py:973 | Loading SentenceTransformer model from BAAI/bge-small-en-v1.5.
+2026-05-07 14:09:04 | QueryProcessingActor-0 | INFO | query_actor.py:198 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Recreated embedding function: HuggingFaceEmbeddings
+2026-05-07 14:09:04 | QueryProcessingActor-0 | INFO | query_actor.py:260 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Recreated retriever with search_type=mmr
+2026-05-07 14:09:04 | sentence_transformers.base.model | INFO | model.py:962 | No modules.json found for cross-encoder/ms-marco-MiniLM-L-4-v2, initializing a new CrossEncoder model.
+2026-05-07 14:09:06 | QueryProcessingActor-0 | INFO | query_actor.py:277 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Recreated RAG spec with retrieval mode
+2026-05-07 14:09:15 | QueryProcessingActor-0 | INFO | query_actor.py:169 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Reusing existing inference engine (config hash: 6350d6d9)
+2026-05-07 14:09:15 | sentence_transformers.base.model | INFO | model.py:973 | Loading SentenceTransformer model from BAAI/bge-small-en-v1.5.
+2026-05-07 14:09:17 | QueryProcessingActor-0 | INFO | query_actor.py:198 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Recreated embedding function: HuggingFaceEmbeddings
+2026-05-07 14:09:17 | QueryProcessingActor-0 | INFO | query_actor.py:260 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Recreated retriever with search_type=mmr
+2026-05-07 14:09:17 | sentence_transformers.base.model | INFO | model.py:962 | No modules.json found for BAAI/bge-reranker-base, initializing a new CrossEncoder model.
+2026-05-07 14:09:19 | QueryProcessingActor-0 | INFO | query_actor.py:277 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Recreated RAG spec with retrieval mode
+2026-05-07 14:09:35 | QueryProcessingActor-0 | INFO | query_actor.py:169 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Reusing existing inference engine (config hash: 6350d6d9)
+2026-05-07 14:09:35 | sentence_transformers.base.model | INFO | model.py:973 | Loading SentenceTransformer model from BAAI/bge-small-en-v1.5.
+2026-05-07 14:09:37 | QueryProcessingActor-0 | INFO | query_actor.py:198 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Recreated embedding function: HuggingFaceEmbeddings
+2026-05-07 14:09:37 | QueryProcessingActor-0 | INFO | query_actor.py:260 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Recreated retriever with search_type=mmr
+2026-05-07 14:09:37 | QueryProcessingActor-0 | INFO | query_actor.py:277 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Recreated RAG spec with retrieval mode
+2026-05-07 14:09:47 | QueryProcessingActor-0 | INFO | query_actor.py:169 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Reusing existing inference engine (config hash: 6350d6d9)
+2026-05-07 14:09:47 | sentence_transformers.base.model | INFO | model.py:973 | Loading SentenceTransformer model from BAAI/bge-small-en-v1.5.
+2026-05-07 14:09:49 | QueryProcessingActor-0 | INFO | query_actor.py:198 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Recreated embedding function: HuggingFaceEmbeddings
+2026-05-07 14:09:49 | QueryProcessingActor-0 | INFO | query_actor.py:260 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Recreated retriever with search_type=similarity_score_threshold
+2026-05-07 14:09:49 | sentence_transformers.base.model | INFO | model.py:962 | No modules.json found for cross-encoder/ms-marco-MiniLM-L-4-v2, initializing a new CrossEncoder model.
+2026-05-07 14:09:51 | QueryProcessingActor-0 | INFO | query_actor.py:277 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Recreated RAG spec with retrieval mode
+2026-05-07 14:09:59 | QueryProcessingActor-0 | INFO | query_actor.py:169 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Reusing existing inference engine (config hash: 6350d6d9)
+2026-05-07 14:10:00 | sentence_transformers.base.model | INFO | model.py:973 | Loading SentenceTransformer model from BAAI/bge-small-en-v1.5.
+2026-05-07 14:10:01 | QueryProcessingActor-0 | INFO | query_actor.py:198 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Recreated embedding function: HuggingFaceEmbeddings
+2026-05-07 14:10:01 | QueryProcessingActor-0 | INFO | query_actor.py:260 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Recreated retriever with search_type=similarity_score_threshold
+2026-05-07 14:10:01 | sentence_transformers.base.model | INFO | model.py:962 | No modules.json found for BAAI/bge-reranker-base, initializing a new CrossEncoder model.
+2026-05-07 14:10:04 | QueryProcessingActor-0 | INFO | query_actor.py:277 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Recreated RAG spec with retrieval mode
+2026-05-07 14:10:13 | QueryProcessingActor-0 | INFO | query_actor.py:169 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Reusing existing inference engine (config hash: 6350d6d9)
+2026-05-07 14:10:14 | sentence_transformers.base.model | INFO | model.py:973 | Loading SentenceTransformer model from BAAI/bge-small-en-v1.5.
+2026-05-07 14:10:15 | QueryProcessingActor-0 | INFO | query_actor.py:198 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Recreated embedding function: HuggingFaceEmbeddings
+2026-05-07 14:10:15 | QueryProcessingActor-0 | INFO | query_actor.py:260 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Recreated retriever with search_type=similarity_score_threshold
+2026-05-07 14:10:15 | QueryProcessingActor-0 | INFO | query_actor.py:277 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Recreated RAG spec with retrieval mode
+2026-05-07 14:10:23 | QueryProcessingActor-0 | INFO | query_actor.py:169 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Reusing existing inference engine (config hash: 6350d6d9)
+2026-05-07 14:10:23 | sentence_transformers.base.model | INFO | model.py:973 | Loading SentenceTransformer model from BAAI/bge-small-en-v1.5.
+2026-05-07 14:10:25 | QueryProcessingActor-0 | INFO | query_actor.py:198 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Recreated embedding function: HuggingFaceEmbeddings
+2026-05-07 14:10:25 | QueryProcessingActor-0 | INFO | query_actor.py:260 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Recreated retriever with search_type=similarity
+2026-05-07 14:10:25 | sentence_transformers.base.model | INFO | model.py:962 | No modules.json found for cross-encoder/ms-marco-MiniLM-L-4-v2, initializing a new CrossEncoder model.
+2026-05-07 14:10:27 | QueryProcessingActor-0 | INFO | query_actor.py:277 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Recreated RAG spec with retrieval mode
+2026-05-07 14:10:36 | QueryProcessingActor-0 | INFO | query_actor.py:169 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Reusing existing inference engine (config hash: 6350d6d9)
+2026-05-07 14:10:36 | sentence_transformers.base.model | INFO | model.py:973 | Loading SentenceTransformer model from BAAI/bge-small-en-v1.5.
+2026-05-07 14:10:38 | QueryProcessingActor-0 | INFO | query_actor.py:198 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Recreated embedding function: HuggingFaceEmbeddings
+2026-05-07 14:10:38 | QueryProcessingActor-0 | INFO | query_actor.py:260 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Recreated retriever with search_type=similarity
+2026-05-07 14:10:38 | sentence_transformers.base.model | INFO | model.py:962 | No modules.json found for BAAI/bge-reranker-base, initializing a new CrossEncoder model.
+2026-05-07 14:10:40 | QueryProcessingActor-0 | INFO | query_actor.py:277 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Recreated RAG spec with retrieval mode
+2026-05-07 14:10:53 | QueryProcessingActor-0 | INFO | query_actor.py:169 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Reusing existing inference engine (config hash: 6350d6d9)
+2026-05-07 14:10:53 | sentence_transformers.base.model | INFO | model.py:973 | Loading SentenceTransformer model from BAAI/bge-small-en-v1.5.
+2026-05-07 14:10:55 | QueryProcessingActor-0 | INFO | query_actor.py:198 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Recreated embedding function: HuggingFaceEmbeddings
+2026-05-07 14:10:55 | QueryProcessingActor-0 | INFO | query_actor.py:260 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Recreated retriever with search_type=similarity
+2026-05-07 14:10:55 | QueryProcessingActor-0 | INFO | query_actor.py:277 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Recreated RAG spec with retrieval mode
+2026-05-07 14:11:03 | QueryProcessingActor-0 | INFO | query_actor.py:169 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Reusing existing inference engine (config hash: 6350d6d9)
+2026-05-07 14:11:03 | sentence_transformers.base.model | INFO | model.py:973 | Loading SentenceTransformer model from BAAI/bge-small-en-v1.5.
+2026-05-07 14:11:05 | QueryProcessingActor-0 | INFO | query_actor.py:198 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Recreated embedding function: HuggingFaceEmbeddings
+2026-05-07 14:11:05 | QueryProcessingActor-0 | INFO | query_actor.py:260 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Recreated retriever with search_type=mmr
+2026-05-07 14:11:05 | sentence_transformers.base.model | INFO | model.py:962 | No modules.json found for cross-encoder/ms-marco-MiniLM-L-4-v2, initializing a new CrossEncoder model.
+2026-05-07 14:11:07 | QueryProcessingActor-0 | INFO | query_actor.py:277 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Recreated RAG spec with retrieval mode
+2026-05-07 14:11:17 | QueryProcessingActor-0 | INFO | query_actor.py:169 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Reusing existing inference engine (config hash: 6350d6d9)
+2026-05-07 14:11:17 | sentence_transformers.base.model | INFO | model.py:973 | Loading SentenceTransformer model from BAAI/bge-small-en-v1.5.
+2026-05-07 14:11:18 | QueryProcessingActor-0 | INFO | query_actor.py:198 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Recreated embedding function: HuggingFaceEmbeddings
+2026-05-07 14:11:19 | QueryProcessingActor-0 | INFO | query_actor.py:260 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Recreated retriever with search_type=mmr
+2026-05-07 14:11:19 | sentence_transformers.base.model | INFO | model.py:962 | No modules.json found for BAAI/bge-reranker-base, initializing a new CrossEncoder model.
+2026-05-07 14:11:21 | QueryProcessingActor-0 | INFO | query_actor.py:277 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Recreated RAG spec with retrieval mode
+2026-05-07 14:11:33 | QueryProcessingActor-0 | INFO | query_actor.py:169 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Reusing existing inference engine (config hash: 6350d6d9)
+2026-05-07 14:11:33 | sentence_transformers.base.model | INFO | model.py:973 | Loading SentenceTransformer model from BAAI/bge-small-en-v1.5.
+2026-05-07 14:11:35 | QueryProcessingActor-0 | INFO | query_actor.py:198 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Recreated embedding function: HuggingFaceEmbeddings
+2026-05-07 14:11:35 | QueryProcessingActor-0 | INFO | query_actor.py:260 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Recreated retriever with search_type=mmr
+2026-05-07 14:11:35 | QueryProcessingActor-0 | INFO | query_actor.py:277 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Recreated RAG spec with retrieval mode
+2026-05-07 14:11:43 | QueryProcessingActor-0 | INFO | query_actor.py:169 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Reusing existing inference engine (config hash: 6350d6d9)
+2026-05-07 14:11:43 | sentence_transformers.base.model | INFO | model.py:973 | Loading SentenceTransformer model from BAAI/bge-small-en-v1.5.
+2026-05-07 14:11:45 | QueryProcessingActor-0 | INFO | query_actor.py:198 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Recreated embedding function: HuggingFaceEmbeddings
+2026-05-07 14:11:45 | QueryProcessingActor-0 | INFO | query_actor.py:260 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Recreated retriever with search_type=similarity_score_threshold
+2026-05-07 14:11:46 | sentence_transformers.base.model | INFO | model.py:962 | No modules.json found for cross-encoder/ms-marco-MiniLM-L-4-v2, initializing a new CrossEncoder model.
+2026-05-07 14:11:48 | QueryProcessingActor-0 | INFO | query_actor.py:277 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Recreated RAG spec with retrieval mode
+2026-05-07 14:11:58 | QueryProcessingActor-0 | INFO | query_actor.py:169 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Reusing existing inference engine (config hash: 6350d6d9)
+2026-05-07 14:11:58 | sentence_transformers.base.model | INFO | model.py:973 | Loading SentenceTransformer model from BAAI/bge-small-en-v1.5.
+2026-05-07 14:12:00 | QueryProcessingActor-0 | INFO | query_actor.py:198 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Recreated embedding function: HuggingFaceEmbeddings
+2026-05-07 14:12:00 | QueryProcessingActor-0 | INFO | query_actor.py:260 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Recreated retriever with search_type=similarity_score_threshold
+2026-05-07 14:12:00 | sentence_transformers.base.model | INFO | model.py:962 | No modules.json found for BAAI/bge-reranker-base, initializing a new CrossEncoder model.
+2026-05-07 14:12:02 | QueryProcessingActor-0 | INFO | query_actor.py:277 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Recreated RAG spec with retrieval mode
+2026-05-07 14:12:15 | QueryProcessingActor-0 | INFO | query_actor.py:169 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Reusing existing inference engine (config hash: 6350d6d9)
+2026-05-07 14:12:15 | sentence_transformers.base.model | INFO | model.py:973 | Loading SentenceTransformer model from BAAI/bge-small-en-v1.5.
+2026-05-07 14:12:17 | QueryProcessingActor-0 | INFO | query_actor.py:198 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Recreated embedding function: HuggingFaceEmbeddings
+2026-05-07 14:12:17 | QueryProcessingActor-0 | INFO | query_actor.py:260 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Recreated retriever with search_type=similarity_score_threshold
+2026-05-07 14:12:17 | QueryProcessingActor-0 | INFO | query_actor.py:277 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Recreated RAG spec with retrieval mode
+2026-05-07 14:12:26 | QueryProcessingActor-0 | INFO | query_actor.py:169 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Reusing existing inference engine (config hash: 6350d6d9)
+2026-05-07 14:12:26 | sentence_transformers.base.model | INFO | model.py:973 | Loading SentenceTransformer model from BAAI/bge-small-en-v1.5.
+2026-05-07 14:12:32 | QueryProcessingActor-0 | INFO | query_actor.py:198 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Recreated embedding function: HuggingFaceEmbeddings
+2026-05-07 14:12:32 | QueryProcessingActor-0 | INFO | query_actor.py:260 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Recreated retriever with search_type=similarity
+2026-05-07 14:12:32 | sentence_transformers.base.model | INFO | model.py:962 | No modules.json found for cross-encoder/ms-marco-MiniLM-L-4-v2, initializing a new CrossEncoder model.
+2026-05-07 14:12:34 | QueryProcessingActor-0 | INFO | query_actor.py:277 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Recreated RAG spec with retrieval mode
+2026-05-07 14:12:45 | QueryProcessingActor-0 | INFO | query_actor.py:169 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Reusing existing inference engine (config hash: 6350d6d9)
+2026-05-07 14:12:45 | sentence_transformers.base.model | INFO | model.py:973 | Loading SentenceTransformer model from BAAI/bge-small-en-v1.5.
+2026-05-07 14:12:47 | QueryProcessingActor-0 | INFO | query_actor.py:198 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Recreated embedding function: HuggingFaceEmbeddings
+2026-05-07 14:12:47 | QueryProcessingActor-0 | INFO | query_actor.py:260 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Recreated retriever with search_type=similarity
+2026-05-07 14:12:47 | sentence_transformers.base.model | INFO | model.py:962 | No modules.json found for BAAI/bge-reranker-base, initializing a new CrossEncoder model.
+2026-05-07 14:12:49 | QueryProcessingActor-0 | INFO | query_actor.py:277 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Recreated RAG spec with retrieval mode
+2026-05-07 14:13:05 | QueryProcessingActor-0 | INFO | query_actor.py:169 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Reusing existing inference engine (config hash: 6350d6d9)
+2026-05-07 14:13:06 | sentence_transformers.base.model | INFO | model.py:973 | Loading SentenceTransformer model from BAAI/bge-small-en-v1.5.
+2026-05-07 14:13:07 | QueryProcessingActor-0 | INFO | query_actor.py:198 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Recreated embedding function: HuggingFaceEmbeddings
+2026-05-07 14:13:07 | QueryProcessingActor-0 | INFO | query_actor.py:260 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Recreated retriever with search_type=similarity
+2026-05-07 14:13:07 | QueryProcessingActor-0 | INFO | query_actor.py:277 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Recreated RAG spec with retrieval mode
+2026-05-07 14:13:18 | QueryProcessingActor-0 | INFO | query_actor.py:169 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Reusing existing inference engine (config hash: 6350d6d9)
+2026-05-07 14:13:18 | sentence_transformers.base.model | INFO | model.py:973 | Loading SentenceTransformer model from BAAI/bge-small-en-v1.5.
+2026-05-07 14:13:20 | QueryProcessingActor-0 | INFO | query_actor.py:198 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Recreated embedding function: HuggingFaceEmbeddings
+2026-05-07 14:13:20 | QueryProcessingActor-0 | INFO | query_actor.py:260 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Recreated retriever with search_type=mmr
+2026-05-07 14:13:20 | sentence_transformers.base.model | INFO | model.py:962 | No modules.json found for cross-encoder/ms-marco-MiniLM-L-4-v2, initializing a new CrossEncoder model.
+2026-05-07 14:13:23 | QueryProcessingActor-0 | INFO | query_actor.py:277 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Recreated RAG spec with retrieval mode
+2026-05-07 14:13:33 | QueryProcessingActor-0 | INFO | query_actor.py:169 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Reusing existing inference engine (config hash: 6350d6d9)
+2026-05-07 14:13:33 | sentence_transformers.base.model | INFO | model.py:973 | Loading SentenceTransformer model from BAAI/bge-small-en-v1.5.
+2026-05-07 14:13:35 | QueryProcessingActor-0 | INFO | query_actor.py:198 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Recreated embedding function: HuggingFaceEmbeddings
+2026-05-07 14:13:35 | QueryProcessingActor-0 | INFO | query_actor.py:260 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Recreated retriever with search_type=mmr
+2026-05-07 14:13:35 | sentence_transformers.base.model | INFO | model.py:962 | No modules.json found for BAAI/bge-reranker-base, initializing a new CrossEncoder model.
+2026-05-07 14:13:37 | QueryProcessingActor-0 | INFO | query_actor.py:277 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Recreated RAG spec with retrieval mode
+2026-05-07 14:13:55 | QueryProcessingActor-0 | INFO | query_actor.py:169 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Reusing existing inference engine (config hash: 6350d6d9)
+2026-05-07 14:13:55 | sentence_transformers.base.model | INFO | model.py:973 | Loading SentenceTransformer model from BAAI/bge-small-en-v1.5.
+2026-05-07 14:13:57 | QueryProcessingActor-0 | INFO | query_actor.py:198 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Recreated embedding function: HuggingFaceEmbeddings
+2026-05-07 14:13:57 | QueryProcessingActor-0 | INFO | query_actor.py:260 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Recreated retriever with search_type=mmr
+2026-05-07 14:13:57 | QueryProcessingActor-0 | INFO | query_actor.py:277 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Recreated RAG spec with retrieval mode
+2026-05-07 14:14:08 | QueryProcessingActor-0 | INFO | query_actor.py:169 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Reusing existing inference engine (config hash: 6350d6d9)
+2026-05-07 14:14:09 | sentence_transformers.base.model | INFO | model.py:973 | Loading SentenceTransformer model from BAAI/bge-small-en-v1.5.
+2026-05-07 14:14:10 | QueryProcessingActor-0 | INFO | query_actor.py:198 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Recreated embedding function: HuggingFaceEmbeddings
+2026-05-07 14:14:10 | QueryProcessingActor-0 | INFO | query_actor.py:260 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Recreated retriever with search_type=similarity_score_threshold
+2026-05-07 14:14:11 | sentence_transformers.base.model | INFO | model.py:962 | No modules.json found for cross-encoder/ms-marco-MiniLM-L-4-v2, initializing a new CrossEncoder model.
+2026-05-07 14:14:13 | QueryProcessingActor-0 | INFO | query_actor.py:277 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Recreated RAG spec with retrieval mode
+2026-05-07 14:15:22 | QueryProcessingActor-0 | INFO | query_actor.py:169 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Reusing existing inference engine (config hash: 6350d6d9)
+2026-05-07 14:15:22 | sentence_transformers.base.model | INFO | model.py:973 | Loading SentenceTransformer model from BAAI/bge-small-en-v1.5.
+2026-05-07 14:15:24 | QueryProcessingActor-0 | INFO | query_actor.py:198 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Recreated embedding function: HuggingFaceEmbeddings
+2026-05-07 14:15:24 | QueryProcessingActor-0 | INFO | query_actor.py:260 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Recreated retriever with search_type=similarity_score_threshold
+2026-05-07 14:15:24 | sentence_transformers.base.model | INFO | model.py:962 | No modules.json found for BAAI/bge-reranker-base, initializing a new CrossEncoder model.
+2026-05-07 14:15:26 | QueryProcessingActor-0 | INFO | query_actor.py:277 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Recreated RAG spec with retrieval mode
+2026-05-07 14:16:10 | QueryProcessingActor-0 | INFO | query_actor.py:169 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Reusing existing inference engine (config hash: 6350d6d9)
+2026-05-07 14:16:11 | sentence_transformers.base.model | INFO | model.py:973 | Loading SentenceTransformer model from BAAI/bge-small-en-v1.5.
+2026-05-07 14:16:12 | QueryProcessingActor-0 | INFO | query_actor.py:198 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Recreated embedding function: HuggingFaceEmbeddings
+2026-05-07 14:16:12 | QueryProcessingActor-0 | INFO | query_actor.py:260 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Recreated retriever with search_type=similarity_score_threshold
+2026-05-07 14:16:12 | QueryProcessingActor-0 | INFO | query_actor.py:277 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Recreated RAG spec with retrieval mode
+2026-05-07 14:16:24 | QueryProcessingActor-0 | INFO | query_actor.py:169 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Reusing existing inference engine (config hash: 6350d6d9)
+2026-05-07 14:16:25 | sentence_transformers.base.model | INFO | model.py:973 | Loading SentenceTransformer model from BAAI/bge-small-en-v1.5.
+2026-05-07 14:16:26 | QueryProcessingActor-0 | INFO | query_actor.py:198 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Recreated embedding function: HuggingFaceEmbeddings
+2026-05-07 14:16:26 | QueryProcessingActor-0 | INFO | query_actor.py:260 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Recreated retriever with search_type=similarity
+2026-05-07 14:16:27 | sentence_transformers.base.model | INFO | model.py:962 | No modules.json found for cross-encoder/ms-marco-MiniLM-L-4-v2, initializing a new CrossEncoder model.
+2026-05-07 14:16:29 | QueryProcessingActor-0 | INFO | query_actor.py:277 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Recreated RAG spec with retrieval mode
+2026-05-07 14:16:39 | QueryProcessingActor-0 | INFO | query_actor.py:169 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Reusing existing inference engine (config hash: 6350d6d9)
+2026-05-07 14:16:39 | sentence_transformers.base.model | INFO | model.py:973 | Loading SentenceTransformer model from BAAI/bge-small-en-v1.5.
+2026-05-07 14:16:41 | QueryProcessingActor-0 | INFO | query_actor.py:198 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Recreated embedding function: HuggingFaceEmbeddings
+2026-05-07 14:16:41 | QueryProcessingActor-0 | INFO | query_actor.py:260 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Recreated retriever with search_type=similarity
+2026-05-07 14:16:41 | sentence_transformers.base.model | INFO | model.py:962 | No modules.json found for BAAI/bge-reranker-base, initializing a new CrossEncoder model.
+2026-05-07 14:16:43 | QueryProcessingActor-0 | INFO | query_actor.py:277 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Recreated RAG spec with retrieval mode
+2026-05-07 14:16:54 | QueryProcessingActor-0 | INFO | query_actor.py:169 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Reusing existing inference engine (config hash: 6350d6d9)
+2026-05-07 14:16:54 | sentence_transformers.base.model | INFO | model.py:973 | Loading SentenceTransformer model from BAAI/bge-small-en-v1.5.
+2026-05-07 14:16:56 | QueryProcessingActor-0 | INFO | query_actor.py:198 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Recreated embedding function: HuggingFaceEmbeddings
+2026-05-07 14:16:56 | QueryProcessingActor-0 | INFO | query_actor.py:260 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Recreated retriever with search_type=similarity
+2026-05-07 14:16:56 | QueryProcessingActor-0 | INFO | query_actor.py:277 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Recreated RAG spec with retrieval mode
+2026-05-07 14:17:04 | QueryProcessingActor-0 | INFO | query_actor.py:169 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Reusing existing inference engine (config hash: 6350d6d9)
+2026-05-07 14:17:04 | sentence_transformers.base.model | INFO | model.py:973 | Loading SentenceTransformer model from BAAI/bge-small-en-v1.5.
+2026-05-07 14:17:06 | QueryProcessingActor-0 | INFO | query_actor.py:198 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Recreated embedding function: HuggingFaceEmbeddings
+2026-05-07 14:17:06 | QueryProcessingActor-0 | INFO | query_actor.py:260 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Recreated retriever with search_type=mmr
+2026-05-07 14:17:06 | sentence_transformers.base.model | INFO | model.py:962 | No modules.json found for cross-encoder/ms-marco-MiniLM-L-4-v2, initializing a new CrossEncoder model.
+2026-05-07 14:17:08 | QueryProcessingActor-0 | INFO | query_actor.py:277 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Recreated RAG spec with retrieval mode
+2026-05-07 14:17:17 | QueryProcessingActor-0 | INFO | query_actor.py:169 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Reusing existing inference engine (config hash: 6350d6d9)
+2026-05-07 14:17:17 | sentence_transformers.base.model | INFO | model.py:973 | Loading SentenceTransformer model from BAAI/bge-small-en-v1.5.
+2026-05-07 14:17:19 | QueryProcessingActor-0 | INFO | query_actor.py:198 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Recreated embedding function: HuggingFaceEmbeddings
+2026-05-07 14:17:19 | QueryProcessingActor-0 | INFO | query_actor.py:260 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Recreated retriever with search_type=mmr
+2026-05-07 14:17:19 | sentence_transformers.base.model | INFO | model.py:962 | No modules.json found for BAAI/bge-reranker-base, initializing a new CrossEncoder model.
+2026-05-07 14:17:21 | QueryProcessingActor-0 | INFO | query_actor.py:277 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Recreated RAG spec with retrieval mode
+2026-05-07 14:17:31 | QueryProcessingActor-0 | INFO | query_actor.py:169 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Reusing existing inference engine (config hash: 6350d6d9)
+2026-05-07 14:17:31 | sentence_transformers.base.model | INFO | model.py:973 | Loading SentenceTransformer model from BAAI/bge-small-en-v1.5.
+2026-05-07 14:17:33 | QueryProcessingActor-0 | INFO | query_actor.py:198 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Recreated embedding function: HuggingFaceEmbeddings
+2026-05-07 14:17:33 | QueryProcessingActor-0 | INFO | query_actor.py:260 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Recreated retriever with search_type=mmr
+2026-05-07 14:17:33 | QueryProcessingActor-0 | INFO | query_actor.py:277 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Recreated RAG spec with retrieval mode
+2026-05-07 14:17:42 | QueryProcessingActor-0 | INFO | query_actor.py:169 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Reusing existing inference engine (config hash: 6350d6d9)
+2026-05-07 14:17:42 | sentence_transformers.base.model | INFO | model.py:973 | Loading SentenceTransformer model from BAAI/bge-small-en-v1.5.
+2026-05-07 14:17:43 | QueryProcessingActor-0 | INFO | query_actor.py:198 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Recreated embedding function: HuggingFaceEmbeddings
+2026-05-07 14:17:43 | QueryProcessingActor-0 | INFO | query_actor.py:260 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Recreated retriever with search_type=similarity_score_threshold
+2026-05-07 14:17:44 | sentence_transformers.base.model | INFO | model.py:962 | No modules.json found for cross-encoder/ms-marco-MiniLM-L-4-v2, initializing a new CrossEncoder model.
+2026-05-07 14:17:46 | QueryProcessingActor-0 | INFO | query_actor.py:277 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Recreated RAG spec with retrieval mode
+2026-05-07 14:17:54 | QueryProcessingActor-0 | INFO | query_actor.py:169 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Reusing existing inference engine (config hash: 6350d6d9)
+2026-05-07 14:17:55 | sentence_transformers.base.model | INFO | model.py:973 | Loading SentenceTransformer model from BAAI/bge-small-en-v1.5.
+2026-05-07 14:17:56 | QueryProcessingActor-0 | INFO | query_actor.py:198 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Recreated embedding function: HuggingFaceEmbeddings
+2026-05-07 14:17:56 | QueryProcessingActor-0 | INFO | query_actor.py:260 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Recreated retriever with search_type=similarity_score_threshold
+2026-05-07 14:17:56 | sentence_transformers.base.model | INFO | model.py:962 | No modules.json found for BAAI/bge-reranker-base, initializing a new CrossEncoder model.
+2026-05-07 14:17:59 | QueryProcessingActor-0 | INFO | query_actor.py:277 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Recreated RAG spec with retrieval mode
+2026-05-07 14:18:09 | QueryProcessingActor-0 | INFO | query_actor.py:169 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Reusing existing inference engine (config hash: 6350d6d9)
+2026-05-07 14:18:09 | sentence_transformers.base.model | INFO | model.py:973 | Loading SentenceTransformer model from BAAI/bge-small-en-v1.5.
+2026-05-07 14:18:11 | QueryProcessingActor-0 | INFO | query_actor.py:198 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Recreated embedding function: HuggingFaceEmbeddings
+2026-05-07 14:18:11 | QueryProcessingActor-0 | INFO | query_actor.py:260 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Recreated retriever with search_type=similarity_score_threshold
+2026-05-07 14:18:11 | QueryProcessingActor-0 | INFO | query_actor.py:277 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Recreated RAG spec with retrieval mode
+2026-05-07 14:18:18 | QueryProcessingActor-0 | INFO | query_actor.py:169 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Reusing existing inference engine (config hash: 6350d6d9)
+2026-05-07 14:18:18 | sentence_transformers.base.model | INFO | model.py:973 | Loading SentenceTransformer model from BAAI/bge-small-en-v1.5.
+2026-05-07 14:18:20 | QueryProcessingActor-0 | INFO | query_actor.py:198 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Recreated embedding function: HuggingFaceEmbeddings
+2026-05-07 14:18:20 | QueryProcessingActor-0 | INFO | query_actor.py:260 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Recreated retriever with search_type=similarity
+2026-05-07 14:18:20 | sentence_transformers.base.model | INFO | model.py:962 | No modules.json found for cross-encoder/ms-marco-MiniLM-L-4-v2, initializing a new CrossEncoder model.
+2026-05-07 14:18:23 | QueryProcessingActor-0 | INFO | query_actor.py:277 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Recreated RAG spec with retrieval mode
+2026-05-07 14:18:32 | QueryProcessingActor-0 | INFO | query_actor.py:169 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Reusing existing inference engine (config hash: 6350d6d9)
+2026-05-07 14:18:32 | sentence_transformers.base.model | INFO | model.py:973 | Loading SentenceTransformer model from BAAI/bge-small-en-v1.5.
+2026-05-07 14:18:34 | QueryProcessingActor-0 | INFO | query_actor.py:198 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Recreated embedding function: HuggingFaceEmbeddings
+2026-05-07 14:18:34 | QueryProcessingActor-0 | INFO | query_actor.py:260 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Recreated retriever with search_type=similarity
+2026-05-07 14:18:34 | sentence_transformers.base.model | INFO | model.py:962 | No modules.json found for BAAI/bge-reranker-base, initializing a new CrossEncoder model.
+2026-05-07 14:18:37 | QueryProcessingActor-0 | INFO | query_actor.py:277 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Recreated RAG spec with retrieval mode
+2026-05-07 14:18:50 | QueryProcessingActor-0 | INFO | query_actor.py:169 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Reusing existing inference engine (config hash: 6350d6d9)
+2026-05-07 14:18:51 | sentence_transformers.base.model | INFO | model.py:973 | Loading SentenceTransformer model from BAAI/bge-small-en-v1.5.
+2026-05-07 14:18:52 | QueryProcessingActor-0 | INFO | query_actor.py:198 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Recreated embedding function: HuggingFaceEmbeddings
+2026-05-07 14:18:52 | QueryProcessingActor-0 | INFO | query_actor.py:260 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Recreated retriever with search_type=similarity
+2026-05-07 14:18:52 | QueryProcessingActor-0 | INFO | query_actor.py:277 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Recreated RAG spec with retrieval mode
+2026-05-07 14:19:01 | QueryProcessingActor-0 | INFO | query_actor.py:169 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Reusing existing inference engine (config hash: 6350d6d9)
+2026-05-07 14:19:01 | sentence_transformers.base.model | INFO | model.py:973 | Loading SentenceTransformer model from BAAI/bge-small-en-v1.5.
+2026-05-07 14:19:02 | QueryProcessingActor-0 | INFO | query_actor.py:198 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Recreated embedding function: HuggingFaceEmbeddings
+2026-05-07 14:19:02 | QueryProcessingActor-0 | INFO | query_actor.py:260 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Recreated retriever with search_type=mmr
+2026-05-07 14:19:03 | sentence_transformers.base.model | INFO | model.py:962 | No modules.json found for cross-encoder/ms-marco-MiniLM-L-4-v2, initializing a new CrossEncoder model.
+2026-05-07 14:19:05 | QueryProcessingActor-0 | INFO | query_actor.py:277 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Recreated RAG spec with retrieval mode
+2026-05-07 14:19:14 | QueryProcessingActor-0 | INFO | query_actor.py:169 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Reusing existing inference engine (config hash: 6350d6d9)
+2026-05-07 14:19:14 | sentence_transformers.base.model | INFO | model.py:973 | Loading SentenceTransformer model from BAAI/bge-small-en-v1.5.
+2026-05-07 14:19:16 | QueryProcessingActor-0 | INFO | query_actor.py:198 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Recreated embedding function: HuggingFaceEmbeddings
+2026-05-07 14:19:16 | QueryProcessingActor-0 | INFO | query_actor.py:260 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Recreated retriever with search_type=mmr
+2026-05-07 14:19:16 | sentence_transformers.base.model | INFO | model.py:962 | No modules.json found for BAAI/bge-reranker-base, initializing a new CrossEncoder model.
+2026-05-07 14:19:18 | QueryProcessingActor-0 | INFO | query_actor.py:277 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Recreated RAG spec with retrieval mode
+2026-05-07 14:19:35 | QueryProcessingActor-0 | INFO | query_actor.py:169 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Reusing existing inference engine (config hash: 6350d6d9)
+2026-05-07 14:19:35 | sentence_transformers.base.model | INFO | model.py:973 | Loading SentenceTransformer model from BAAI/bge-small-en-v1.5.
+2026-05-07 14:19:37 | QueryProcessingActor-0 | INFO | query_actor.py:198 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Recreated embedding function: HuggingFaceEmbeddings
+2026-05-07 14:19:37 | QueryProcessingActor-0 | INFO | query_actor.py:260 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Recreated retriever with search_type=mmr
+2026-05-07 14:19:37 | QueryProcessingActor-0 | INFO | query_actor.py:277 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Recreated RAG spec with retrieval mode
+2026-05-07 14:19:46 | QueryProcessingActor-0 | INFO | query_actor.py:169 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Reusing existing inference engine (config hash: 6350d6d9)
+2026-05-07 14:19:47 | sentence_transformers.base.model | INFO | model.py:973 | Loading SentenceTransformer model from BAAI/bge-small-en-v1.5.
+2026-05-07 14:19:48 | QueryProcessingActor-0 | INFO | query_actor.py:198 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Recreated embedding function: HuggingFaceEmbeddings
+2026-05-07 14:19:48 | QueryProcessingActor-0 | INFO | query_actor.py:260 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Recreated retriever with search_type=similarity_score_threshold
+2026-05-07 14:19:49 | sentence_transformers.base.model | INFO | model.py:962 | No modules.json found for cross-encoder/ms-marco-MiniLM-L-4-v2, initializing a new CrossEncoder model.
+2026-05-07 14:19:51 | QueryProcessingActor-0 | INFO | query_actor.py:277 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Recreated RAG spec with retrieval mode
+2026-05-07 14:20:00 | QueryProcessingActor-0 | INFO | query_actor.py:169 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Reusing existing inference engine (config hash: 6350d6d9)
+2026-05-07 14:20:01 | sentence_transformers.base.model | INFO | model.py:973 | Loading SentenceTransformer model from BAAI/bge-small-en-v1.5.
+2026-05-07 14:20:02 | QueryProcessingActor-0 | INFO | query_actor.py:198 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Recreated embedding function: HuggingFaceEmbeddings
+2026-05-07 14:20:02 | QueryProcessingActor-0 | INFO | query_actor.py:260 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Recreated retriever with search_type=similarity_score_threshold
+2026-05-07 14:20:02 | sentence_transformers.base.model | INFO | model.py:962 | No modules.json found for BAAI/bge-reranker-base, initializing a new CrossEncoder model.
+2026-05-07 14:20:05 | QueryProcessingActor-0 | INFO | query_actor.py:277 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Recreated RAG spec with retrieval mode
+2026-05-07 14:20:18 | QueryProcessingActor-0 | INFO | query_actor.py:169 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Reusing existing inference engine (config hash: 6350d6d9)
+2026-05-07 14:20:18 | sentence_transformers.base.model | INFO | model.py:973 | Loading SentenceTransformer model from BAAI/bge-small-en-v1.5.
+2026-05-07 14:20:20 | QueryProcessingActor-0 | INFO | query_actor.py:198 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Recreated embedding function: HuggingFaceEmbeddings
+2026-05-07 14:20:20 | QueryProcessingActor-0 | INFO | query_actor.py:260 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Recreated retriever with search_type=similarity_score_threshold
+2026-05-07 14:20:20 | QueryProcessingActor-0 | INFO | query_actor.py:277 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Recreated RAG spec with retrieval mode
+2026-05-07 14:20:28 | QueryProcessingActor-0 | INFO | query_actor.py:169 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Reusing existing inference engine (config hash: 6350d6d9)
+2026-05-07 14:20:29 | sentence_transformers.base.model | INFO | model.py:973 | Loading SentenceTransformer model from BAAI/bge-small-en-v1.5.
+2026-05-07 14:20:30 | QueryProcessingActor-0 | INFO | query_actor.py:198 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Recreated embedding function: HuggingFaceEmbeddings
+2026-05-07 14:20:30 | QueryProcessingActor-0 | INFO | query_actor.py:260 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Recreated retriever with search_type=similarity
+2026-05-07 14:20:30 | sentence_transformers.base.model | INFO | model.py:962 | No modules.json found for cross-encoder/ms-marco-MiniLM-L-4-v2, initializing a new CrossEncoder model.
+2026-05-07 14:20:33 | QueryProcessingActor-0 | INFO | query_actor.py:277 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Recreated RAG spec with retrieval mode
+2026-05-07 14:20:45 | QueryProcessingActor-0 | INFO | query_actor.py:169 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Reusing existing inference engine (config hash: 6350d6d9)
+2026-05-07 14:20:45 | sentence_transformers.base.model | INFO | model.py:973 | Loading SentenceTransformer model from BAAI/bge-small-en-v1.5.
+2026-05-07 14:20:47 | QueryProcessingActor-0 | INFO | query_actor.py:198 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Recreated embedding function: HuggingFaceEmbeddings
+2026-05-07 14:20:47 | QueryProcessingActor-0 | INFO | query_actor.py:260 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Recreated retriever with search_type=similarity
+2026-05-07 14:20:47 | sentence_transformers.base.model | INFO | model.py:962 | No modules.json found for BAAI/bge-reranker-base, initializing a new CrossEncoder model.
+2026-05-07 14:20:49 | QueryProcessingActor-0 | INFO | query_actor.py:277 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Recreated RAG spec with retrieval mode
+2026-05-07 14:21:05 | QueryProcessingActor-0 | INFO | query_actor.py:169 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Reusing existing inference engine (config hash: 6350d6d9)
+2026-05-07 14:21:05 | sentence_transformers.base.model | INFO | model.py:973 | Loading SentenceTransformer model from BAAI/bge-small-en-v1.5.
+2026-05-07 14:21:07 | QueryProcessingActor-0 | INFO | query_actor.py:198 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Recreated embedding function: HuggingFaceEmbeddings
+2026-05-07 14:21:07 | QueryProcessingActor-0 | INFO | query_actor.py:260 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Recreated retriever with search_type=similarity
+2026-05-07 14:21:07 | QueryProcessingActor-0 | INFO | query_actor.py:277 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Recreated RAG spec with retrieval mode
+2026-05-07 14:21:18 | QueryProcessingActor-0 | INFO | query_actor.py:169 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Reusing existing inference engine (config hash: 6350d6d9)
+2026-05-07 14:21:18 | sentence_transformers.base.model | INFO | model.py:973 | Loading SentenceTransformer model from BAAI/bge-small-en-v1.5.
+2026-05-07 14:21:19 | QueryProcessingActor-0 | INFO | query_actor.py:198 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Recreated embedding function: HuggingFaceEmbeddings
+2026-05-07 14:21:19 | QueryProcessingActor-0 | INFO | query_actor.py:260 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Recreated retriever with search_type=mmr
+2026-05-07 14:21:20 | sentence_transformers.base.model | INFO | model.py:962 | No modules.json found for cross-encoder/ms-marco-MiniLM-L-4-v2, initializing a new CrossEncoder model.
+2026-05-07 14:21:22 | QueryProcessingActor-0 | INFO | query_actor.py:277 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Recreated RAG spec with retrieval mode
+2026-05-07 14:21:33 | QueryProcessingActor-0 | INFO | query_actor.py:169 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Reusing existing inference engine (config hash: 6350d6d9)
+2026-05-07 14:21:34 | sentence_transformers.base.model | INFO | model.py:973 | Loading SentenceTransformer model from BAAI/bge-small-en-v1.5.
+2026-05-07 14:21:35 | QueryProcessingActor-0 | INFO | query_actor.py:198 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Recreated embedding function: HuggingFaceEmbeddings
+2026-05-07 14:21:35 | QueryProcessingActor-0 | INFO | query_actor.py:260 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Recreated retriever with search_type=mmr
+2026-05-07 14:21:36 | sentence_transformers.base.model | INFO | model.py:962 | No modules.json found for BAAI/bge-reranker-base, initializing a new CrossEncoder model.
+2026-05-07 14:21:38 | QueryProcessingActor-0 | INFO | query_actor.py:277 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Recreated RAG spec with retrieval mode
+2026-05-07 14:21:55 | QueryProcessingActor-0 | INFO | query_actor.py:169 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Reusing existing inference engine (config hash: 6350d6d9)
+2026-05-07 14:21:55 | sentence_transformers.base.model | INFO | model.py:973 | Loading SentenceTransformer model from BAAI/bge-small-en-v1.5.
+2026-05-07 14:21:57 | QueryProcessingActor-0 | INFO | query_actor.py:198 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Recreated embedding function: HuggingFaceEmbeddings
+2026-05-07 14:21:57 | QueryProcessingActor-0 | INFO | query_actor.py:260 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Recreated retriever with search_type=mmr
+2026-05-07 14:21:57 | QueryProcessingActor-0 | INFO | query_actor.py:277 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Recreated RAG spec with retrieval mode
+2026-05-07 14:22:12 | QueryProcessingActor-0 | INFO | query_actor.py:169 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Reusing existing inference engine (config hash: 6350d6d9)
+2026-05-07 14:22:12 | sentence_transformers.base.model | INFO | model.py:973 | Loading SentenceTransformer model from BAAI/bge-small-en-v1.5.
+2026-05-07 14:22:14 | QueryProcessingActor-0 | INFO | query_actor.py:198 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Recreated embedding function: HuggingFaceEmbeddings
+2026-05-07 14:22:14 | QueryProcessingActor-0 | INFO | query_actor.py:260 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Recreated retriever with search_type=similarity_score_threshold
+2026-05-07 14:22:14 | sentence_transformers.base.model | INFO | model.py:962 | No modules.json found for cross-encoder/ms-marco-MiniLM-L-4-v2, initializing a new CrossEncoder model.
+2026-05-07 14:22:16 | QueryProcessingActor-0 | INFO | query_actor.py:277 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Recreated RAG spec with retrieval mode
+2026-05-07 14:22:35 | QueryProcessingActor-0 | INFO | query_actor.py:169 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Reusing existing inference engine (config hash: 6350d6d9)
+2026-05-07 14:22:35 | sentence_transformers.base.model | INFO | model.py:973 | Loading SentenceTransformer model from BAAI/bge-small-en-v1.5.
+2026-05-07 14:22:37 | QueryProcessingActor-0 | INFO | query_actor.py:198 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Recreated embedding function: HuggingFaceEmbeddings
+2026-05-07 14:22:37 | QueryProcessingActor-0 | INFO | query_actor.py:260 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Recreated retriever with search_type=similarity_score_threshold
+2026-05-07 14:22:37 | sentence_transformers.base.model | INFO | model.py:962 | No modules.json found for BAAI/bge-reranker-base, initializing a new CrossEncoder model.
+2026-05-07 14:22:39 | QueryProcessingActor-0 | INFO | query_actor.py:277 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Recreated RAG spec with retrieval mode
+2026-05-07 14:22:55 | QueryProcessingActor-0 | INFO | query_actor.py:169 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Reusing existing inference engine (config hash: 6350d6d9)
+2026-05-07 14:22:56 | sentence_transformers.base.model | INFO | model.py:973 | Loading SentenceTransformer model from BAAI/bge-small-en-v1.5.
+2026-05-07 14:22:57 | QueryProcessingActor-0 | INFO | query_actor.py:198 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Recreated embedding function: HuggingFaceEmbeddings
+2026-05-07 14:22:57 | QueryProcessingActor-0 | INFO | query_actor.py:260 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Recreated retriever with search_type=similarity_score_threshold
+2026-05-07 14:22:57 | QueryProcessingActor-0 | INFO | query_actor.py:277 | [rag-grid-27configs-validation_1:QueryProcessingActor-0] Recreated RAG spec with retrieval mode
