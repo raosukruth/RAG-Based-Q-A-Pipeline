@@ -14,16 +14,17 @@ from pathlib import Path
 from langchain_huggingface import HuggingFaceEmbeddings
 from langchain_pinecone import PineconeVectorStore
 from pinecone import Pinecone
+from langchain_classic.retrievers.contextual_compression import ContextualCompressionRetriever
+from langchain_classic.retrievers.document_compressors import CrossEncoderReranker
+from langchain_community.cross_encoders import HuggingFaceCrossEncoder
 # from langchain_community.retrievers import BM25Retriever
-# from langchain.retrievers import EnsembleRetriever, ContextualCompressionRetriever
-# from langchain.retrievers.document_compressors import CrossEncoderReranker
-# from langchain_community.cross_encoders import HuggingFaceCrossEncoder
+# from langchain.retrievers import EnsembleRetriever
 
 
 PINECONE_API_KEY = Path("~/pinecone-api-key.txt").expanduser().read_text(encoding="utf-8").splitlines()[0].strip()
 PINECONE_INDEX  = "project1-rag-index"
 PINECONE_NS     = "chunk1000"
-
+K = 5
 
 def load_docs(docs_path):
     docs = {}
@@ -79,30 +80,17 @@ def resolve_index_name(pc, preferred):
         print(f"Index '{preferred}' not found — using '{available[0]}' instead.")
         return available[0]
 
-def build_pinecone_retriever(k=10):
-    embeddings = HuggingFaceEmbeddings(
-        model_name="BAAI/bge-small-en-v1.5",
-        model_kwargs={"device": "cpu"},
-        encode_kwargs={"normalize_embeddings": True},
-    )
+def build_pinecone_retriever(k=K):
+    embeddings = HuggingFaceEmbeddings(model_name="BAAI/bge-small-en-v1.5", model_kwargs={"device": "cpu"},
+                                        encode_kwargs={"normalize_embeddings": True})
     pc = Pinecone(api_key=PINECONE_API_KEY)
     index_name = resolve_index_name(pc, PINECONE_INDEX)
     index = pc.Index(index_name)
     vector_store = PineconeVectorStore(index=index, embedding=embeddings, namespace=PINECONE_NS)
-    return vector_store.as_retriever(search_type="similarity", search_kwargs={"k": k})
-
-
-# def load_docs(docs_path): ...
-# def create_chunks(docs, chunk_size=1000, chunk_overlap=150): ...
-# def create_faiss_index(docs, api_key): ...
-# def similarity_search(vector_store, query, k=5): ...
-# def build_retriever(documents, vector_store, k_retrieve=20, k_final=5):
-#     vec   = vector_store.as_retriever(search_kwargs={"k": k_retrieve})
-#     bm25  = BM25Retriever.from_documents(documents); bm25.k = k_retrieve
-#     hybrid = EnsembleRetriever(retrievers=[vec, bm25], weights=[0.4, 0.6])
-#     reranker  = HuggingFaceCrossEncoder(model_name="cross-encoder/ms-marco-MiniLM-L-4-v2")
-#     compressor = CrossEncoderReranker(model=reranker, top_n=k_final)
-#     return ContextualCompressionRetriever(base_compressor=compressor, base_retriever=hybrid)
+    base_retriever = vector_store.as_retriever(search_type="similarity", search_kwargs={"k": k})
+    cross_encoder = HuggingFaceCrossEncoder(model_name="BAAI/bge-reranker-base", model_kwargs={"device": "cpu"})
+    reranker = CrossEncoderReranker(model=cross_encoder, top_n=k)
+    return ContextualCompressionRetriever(base_compressor=reranker, base_retriever=base_retriever)
 
 
 def llm_response(query, docs, api_key):
@@ -111,7 +99,7 @@ def llm_response(query, docs, api_key):
         context += doc.page_content + "\n"
     llm = openai.OpenAI(api_key=api_key, base_url="https://tritonai-api.ucsd.edu")
     response = llm.chat.completions.create(
-        model="api-gpt-oss-120b",
+        model="api-mistral-small-3.2-2506",
         messages=[
         {
             "role": "user",
@@ -132,13 +120,13 @@ def load_validation_json(json_path):
 if __name__ == "__main__":
     
     arg_parser = argparse.ArgumentParser()
-    arg_parser.add_argument("--input",      required=False, help="Path to input validation JSON")
-    arg_parser.add_argument("--output",     required=False, help="Path to output JSON")
-    arg_parser.add_argument("--upload",     action="store_true", help="Upload docs to Pinecone instead of running queries")
-    arg_parser.add_argument("--docs",       default="project1_export/sourcedocs", help="Path to .rst source docs (used with --upload)")
-    arg_parser.add_argument("--namespace",  default="chunk1000",                  help="Pinecone namespace (used with --upload)")
-    arg_parser.add_argument("--chunk-size", default=1000, type=int,               help="Chunk size (used with --upload)")
-    arg_parser.add_argument("--overlap",    default=150,  type=int,               help="Chunk overlap (used with --upload)")
+    arg_parser.add_argument("--input", required=False, help="Path to input validation JSON")
+    arg_parser.add_argument("--output", required=False, help="Path to output JSON")
+    arg_parser.add_argument("--upload", action="store_true", help="Upload docs to Pinecone instead of running queries")
+    arg_parser.add_argument("--docs", default="project1_export/sourcedocs", help="Path to .rst source docs (used with --upload)")
+    arg_parser.add_argument("--namespace", default="chunk1000", help="Pinecone namespace (used with --upload)")
+    arg_parser.add_argument("--chunk-size", default=1000, type=int, help="Chunk size (used with --upload)")
+    arg_parser.add_argument("--overlap", default=150, type=int, help="Chunk overlap (used with --upload)")
 
     args = arg_parser.parse_args()
 
@@ -170,8 +158,7 @@ if __name__ == "__main__":
 
     api_key = load_api_key()
 
-    # Pinecone: chunk1000 namespace, similarity k=10, no reranker
-    retriever = build_pinecone_retriever(k=10)
+    retriever = build_pinecone_retriever(k=K)
 
 
     results = []
@@ -181,7 +168,7 @@ if __name__ == "__main__":
         question_id = i["question_id"]
         print(f"Processing question {question_id}: {question}")    
 
-        docs = retriever.invoke(question)   # Pinecone similarity k=10
+        docs = retriever.invoke(question)   
 
         print("\n" + "="*80)
         print(f"Q{question_id}: {question}")
